@@ -1,6 +1,8 @@
 <template>
   <section class="contact-section">
-    <h2>Saiba como chegar:</h2>
+    <div class="badge-title">
+      SAIBA COMO CHEGAR
+    </div>    
     <div class="contact-content">
       <!-- Coluna de informações -->
       <div class="contact-info">
@@ -65,13 +67,6 @@
   font-family: 'Montserrat', sans-serif;
 }
 
-.contact-section h2 {
-  text-align: center;
-  font-size: 38px;
-  font-weight: 600;
-  margin-bottom: 40px;
-}
-
 .contact-content {
   display: flex;
   justify-content: center;
@@ -92,6 +87,34 @@
   gap: 25px; /* aumento do gap */
   align-items: center;
   text-align: center;
+}
+
+.badge-title {
+  position: relative;
+  display: inline-block;
+  background-color: #555; /* Rosa vibrante */
+  color: white;
+  font-weight: 700;
+  font-size: 24px;
+  padding: 12px 24px 12px 36px; /* espaço à esquerda */
+  border-radius: 2px;
+  text-align: center;
+  margin: 0 auto;
+  margin-bottom: 50px;
+}
+
+.badge-title::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 0;
+  height: 0;
+  border-top: 18px solid transparent;
+  border-bottom: 18px solid transparent;
+  border-right: 18px solid #555;
+  transform: translateX(-80%);
+  margin-top: 12px;
 }
 
 /* Blocos de informação levemente maiores */

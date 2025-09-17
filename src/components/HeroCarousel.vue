@@ -1,22 +1,24 @@
 <template>
-  <div class="carousel">
-    <div class="carousel-track" :style="{ transform: `translateX(-${currentIndex * 100}%)` }">
-      <div class="carousel-slide" v-for="(slide, index) in slides" :key="index">
-        <img :src="slide" alt="Slide" />
+  <div class="back">
+    <div id="inicio" class="carousel">
+      <div class="carousel-track" :style="{ transform: `translateX(-${currentIndex * 100}%)` }">
+        <div class="carousel-slide" v-for="(slide, index) in slides" :key="index">
+          <img :src="slide" alt="Slide" />
+        </div>
       </div>
-    </div>
 
-    <button class="arrow left" @click="prevSlide" aria-label="Slide anterior">
-      <span>&#10094;</span>
-    </button>
-    <button class="arrow right" @click="nextSlide" aria-label="Próximo slide">
-      <span>&#10095;</span>
-    </button>
+      <button class="arrow left" @click="prevSlide" aria-label="Slide anterior">
+        <span>&#10094;</span>
+      </button>
+      <button class="arrow right" @click="nextSlide" aria-label="Próximo slide">
+        <span>&#10095;</span>
+      </button>
 
-    <div class="dots">
-      <span v-for="(slide, index) in slides" :key="index" 
-            :class="{ active: index === currentIndex }" 
-            @click="currentIndex = index"></span>
+      <div class="dots">
+        <span v-for="(slide, index) in slides" :key="index" 
+              :class="{ active: index === currentIndex }" 
+              @click="currentIndex = index"></span>
+      </div>
     </div>
   </div>
 </template>
@@ -40,12 +42,16 @@ const prevSlide = () => currentIndex.value = (currentIndex.value - 1 + slides.le
   margin: 0 auto;
   overflow: hidden;
   position: relative;
-    border-top-left-radius: 20px;
-  border-top-right-radius: 20px;
-  border-bottom-left-radius: 0;
-  border-bottom-right-radius: 0;
   box-shadow: 0 10px 30px rgba(0,0,0,0.2);
-  margin-top: 65px;
+  margin-top: 30px;
+  border-radius: 20px;
+}
+
+.back{
+  padding: 30px;
+  background-color: #fce2d6;
+  box-shadow: 8px 0 20px rgba(0, 0, 0, 0.2), /* sombra direita */
+              -8px 0 20px rgba(0, 0, 0, 0.2); /* sombra esquerda */
 }
 
 .carousel-track { display: flex; transition: transform 0.5s ease-in-out; }
@@ -64,7 +70,7 @@ const prevSlide = () => currentIndex.value = (currentIndex.value - 1 + slides.le
   border-bottom-left-radius: 0;
   border-bottom-right-radius: 0;
   transition: transform 0.3s ease, filter 0.3s ease;
-  filter: brightness(100%);
+  filter: brightness(60%);
 }
 
 /* Setas */
@@ -72,7 +78,7 @@ const prevSlide = () => currentIndex.value = (currentIndex.value - 1 + slides.le
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
-  background: rgba(255,255,255,0.8);
+  background: rgba(255, 255, 255, 0.377);
   border: none;
   border-radius: 50%;
   width: 55px;
@@ -84,12 +90,6 @@ const prevSlide = () => currentIndex.value = (currentIndex.value - 1 + slides.le
   transition: all 0.3s ease;
   z-index: 2;
   box-shadow: 0 4px 20px rgba(0,0,0,0.25);
-}
-
-.arrow:hover {
-  transform: translateY(-50%) scale(1.1);
-  background: #f3ddd0;
-  color: #fff;
 }
 
 .arrow span { font-size: 28px; color: #333; }
@@ -120,14 +120,14 @@ const prevSlide = () => currentIndex.value = (currentIndex.value - 1 + slides.le
 
 /* Mobile */
 @media (max-width: 768px) {
-  .carousel-slide img { height: 400px; border-radius: 16px; }
+  .carousel-slide img { height: 600px; }
   .arrow { width: 45px; height: 45px; }
   .arrow span { font-size: 22px; }
   .dots span { width: 12px; height: 12px; }
 }
 
 @media (max-width: 480px) {
-  .carousel-slide img { height: 300px; border-radius: 12px; }
+  .carousel-slide img { height: 400px;}
   .arrow { width: 35px; height: 35px; }
   .arrow span { font-size: 18px; }
   .dots span { width: 10px; height: 10px; }

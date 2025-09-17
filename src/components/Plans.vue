@@ -1,15 +1,15 @@
 <template> 
-  <section class="planos-section">
+  <section id="planos" class="planos-section">
     <div class="planos-header">
-      <h3>Planos que encaixam no orçamento</h3>
-      <h2>Escolha o seu</h2>
+      <div class="badge-title">
+        PLANOS QUE CABEM NO SEU ORÇAMENTO
+      </div>
     </div>
-
     <div class="planos-cards">
       <!-- Plano Vital -->
       <div class="plano-card vital">
         <img src="../assets/item1.png" alt="Vital" />
-        <h4 class="plano-title vital">Vital</h4>
+        <h4 class="plano-title vital">VITAL</h4>
         <p class="plano-price">R$ 19,90 <span>/mês</span></p>
         <ul class="plano-items vital">
           <li>Consultas com clínico geral por R$29,90</li>
@@ -21,7 +21,7 @@
       <!-- Plano Vital Plus -->
       <div class="plano-card plus">
         <img src="../assets/item2.png" alt="Vital Plus" />
-        <h4 class="plano-title plus">Vital Plus</h4>
+        <h4 class="plano-title plus">VITAL PLUS</h4>
         <p class="plano-price">R$ 49,90 <span>/mês</span></p>
         <ul class="plano-items plus">
           <li>Consultas com clínico geral por R$29,90</li>
@@ -34,7 +34,7 @@
       <div class="plano-card premium popular">
         <div class="popular-badge">MAIS POPULAR</div>
         <img src="../assets/item3.png" alt="Vital Premium" />
-        <h4 class="plano-title premium">Vital Premium</h4>
+        <h4 class="plano-title premium">VITAL PREMIUM</h4>
         <p class="plano-price">R$ 79,90 <span>/mês</span></p>
         <ul class="plano-items popular">
           <li>Consultas com clínico geral por R$29,90</li>
@@ -58,18 +58,10 @@
   text-align: center;
 }
 
-.planos-header h3 {
-  color: #ff7f32;
-  font-size: 22px;
-  margin-bottom: 5px;
+.planos-header h1 {
+  margin-bottom: 10px;
 }
 
-.planos-header h2 {
-  font-size: 32px;
-  font-weight: 600;
-  color: #6b5e57;
-  margin-bottom: 40px;
-}
 
 .planos-cards {
   display: flex;
@@ -94,6 +86,35 @@
 .plano-card:hover {
   transform: translateY(-5px);
 }
+
+.badge-title {
+  position: relative;
+  display: inline-block;
+  background-color: #ff7f32; /* Rosa vibrante */
+  color: white;
+  font-weight: 700;
+  font-size: 24px;
+  padding: 12px 24px 12px 36px; /* espaço à esquerda */
+  border-radius: 6px;
+  text-align: center;
+  margin: 0 auto;
+  margin-bottom: 50px;
+}
+
+.badge-title::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 0;
+  height: 0;
+  border-top: 18px solid transparent;
+  border-bottom: 18px solid transparent;
+  border-right: 18px solid #ff7f32;
+  transform: translateX(-80%);
+  margin-top: 12px;
+}
+
 
 /* Sombra colorida por tipo de plano - versão mais leve */
 .plano-card.vital {
