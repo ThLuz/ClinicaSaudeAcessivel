@@ -11,36 +11,36 @@
         <img src="../assets/item1.png" alt="Vital" />
         <h4 class="plano-title vital">Vital</h4>
         <p class="plano-price">R$ 19,90 <span>/mês</span></p>
-        <ul class="plano-items">
+        <ul class="plano-items vital">
           <li>Consultas com clínico geral por R$29,90</li>
           <li>Retorno gratuito com clínico geral dentro de 30 dias</li>
         </ul>
-        <button class="btn">Escolher</button>
+        <button class="btn vital">ASSINAR PLANO</button>
       </div>
 
       <!-- Plano Vital Plus -->
       <div class="plano-card plus">
-        <img src="../assets/imagem2.jpg" alt="Vital Plus" />
+        <img src="../assets/item2.png" alt="Vital Plus" />
         <h4 class="plano-title plus">Vital Plus</h4>
         <p class="plano-price">R$ 49,90 <span>/mês</span></p>
-        <ul class="plano-items">
+        <ul class="plano-items plus">
           <li>Consultas com clínico geral por R$29,90</li>
           <li>Retorno gratuito com clínico geral dentro de 30 dias</li>
         </ul>
-        <button class="btn">Escolher</button>
+        <button class="btn plus">ASSINAR PLANO</button>
       </div>
 
       <!-- Plano Vital Premium -->
       <div class="plano-card premium popular">
-        <div class="popular-badge">Mais Popular</div>
-        <img src="../assets/imagem3.jpg" alt="Vital Premium" />
+        <div class="popular-badge">MAIS POPULAR</div>
+        <img src="../assets/item3.png" alt="Vital Premium" />
         <h4 class="plano-title premium">Vital Premium</h4>
         <p class="plano-price">R$ 79,90 <span>/mês</span></p>
-        <ul class="plano-items">
+        <ul class="plano-items popular">
           <li>Consultas com clínico geral por R$29,90</li>
           <li>Retorno gratuito com clínico geral dentro de 30 dias</li>
         </ul>
-        <button class="btn">Escolher</button>
+        <button class="btn popular">ASSINAR PLANO</button>
       </div>
     </div>
   </section>
@@ -53,7 +53,7 @@
 <style scoped>
 .planos-section {
   padding: 60px 20px;
-  background-color: #fbe9e7; /* fundo claro */
+  background-color: #fce2d6; /* fundo claro */
   font-family: 'Montserrat', sans-serif;
   text-align: center;
 }
@@ -112,7 +112,7 @@
   right: -10px;
   background-color: #ff7f32;
   color: #fff;
-  font-size: 12px;
+  font-size: 14px;
   padding: 5px 10px;
   border-radius: 12px;
   font-weight: 600;
@@ -121,20 +121,24 @@
 .plano-card img {
   width: 50%;      
   height: auto;
-  margin-bottom: 15px;
+  margin-bottom: 0px;
   border-radius: 12px;
 }
 
 .plano-title {
   font-size: 30px;
   font-weight: 600;
-  margin-bottom: 10px;
+  margin-bottom: 0px;
 }
 
 /* Cores do título combinando com a sombra */
 .plano-title.vital { color: #0A9E6C; }
-.plano-title.plus { color: rgba(33, 150, 243, 0.8); }
-.plano-title.premium { color: rgba(255, 127, 50, 0.8); }
+.plano-title.plus { color: #1388E5; }
+.plano-title.premium { color: #F47521; }
+
+.btn.vital { background-color: #0A9E6C; }
+.btn.plus { background-color: #1388E5; }
+.btn.popular { background-color: #F47521; }
 
 .plano-price {
   font-size: 24px;
@@ -167,11 +171,14 @@
 
 .plano-items li::before {
   content: "✔";
-  color: #ff7f32;
   position: absolute;
   left: 0;
   top: 0;
 }
+
+.plano-items.vital li::before { color: #0A9E6C; }
+.plano-items.plus li::before{ color: #1388E5; }
+.plano-items.popular li::before { color: #F47521; }
 
 .btn {
   background-color: #ff7f32;
@@ -182,9 +189,16 @@
   padding: 10px 20px;
   cursor: pointer;
   transition: background-color 0.3s ease;
+  width: 95%;
 }
 
-.btn:hover {
+.btn.vital:hover {
+  background-color: #0c8a60;
+}
+.btn.plus:hover {
+  background-color: #0a7dc9;
+}
+.btn.popular:hover {
   background-color: #e06a1b;
 }
 
