@@ -37,6 +37,12 @@ const prevSlide = () => currentIndex.value = (currentIndex.value - 1 + slides.le
 </script>
 
 <style scoped>
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
 .carousel {
   width: 100%;
   margin: 0 auto;
@@ -48,7 +54,7 @@ const prevSlide = () => currentIndex.value = (currentIndex.value - 1 + slides.le
 }
 
 .back{
-  padding: 30px;
+  padding: 20px;
   background-color: #fce2d6;
   box-shadow: 8px 0 20px rgba(0, 0, 0, 0.2), /* sombra direita */
               -8px 0 20px rgba(0, 0, 0, 0.2); /* sombra esquerda */

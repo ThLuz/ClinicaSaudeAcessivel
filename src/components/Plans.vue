@@ -12,8 +12,10 @@
         <h4 class="plano-title vital">VITAL</h4>
         <p class="plano-price">R$ 19,90 <span>/mês</span></p>
         <ul class="plano-items vital">
-          <li>Consultas com clínico geral por R$29,90</li>
-          <li>Retorno gratuito com clínico geral dentro de 30 dias</li>
+          <li class="yes">Consultas com clínico geral por R$29,90</li>
+          <li class="yes">Especialidades a partir de R$ 59,90</li>
+          <li class="yes">Retorno gratuito com clínico geral dentro de 30 dias</li>
+          <li class="no">Inclusão de até 4 dependentes sem custo</li>
         </ul>
         <button class="btn vital">ASSINAR PLANO</button>
       </div>
@@ -24,8 +26,10 @@
         <h4 class="plano-title plus">VITAL PLUS</h4>
         <p class="plano-price">R$ 49,90 <span>/mês</span></p>
         <ul class="plano-items plus">
-          <li>Consultas com clínico geral por R$29,90</li>
-          <li>Retorno gratuito com clínico geral dentro de 30 dias</li>
+          <li class="yes">Consultas com clínico geral por R$29,90</li>
+          <li class="yes">Especialidades a partir de R$ 59,90</li>
+          <li class="yes">Retorno gratuito com clínico geral dentro de 30 dias</li>
+          <li class="yes">Inclusão de até 4 dependentes sem custo</li>
         </ul>
         <button class="btn plus">ASSINAR PLANO</button>
       </div>
@@ -37,8 +41,10 @@
         <h4 class="plano-title premium">VITAL PREMIUM</h4>
         <p class="plano-price">R$ 79,90 <span>/mês</span></p>
         <ul class="plano-items popular">
-          <li>Consultas com clínico geral por R$29,90</li>
-          <li>Retorno gratuito com clínico geral dentro de 30 dias</li>
+          <li class="yes">Consultas com clínico geral por R$29,90</li>
+          <li class="yes">Especialidades a partir de R$ 59,90</li>
+          <li class="yes">Retorno gratuito com clínico geral dentro de 30 dias</li>
+          <li class="yes">Inclusão de até 4 dependentes sem custo</li>
         </ul>
         <button class="btn popular">ASSINAR PLANO</button>
       </div>

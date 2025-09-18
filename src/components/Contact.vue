@@ -1,8 +1,6 @@
 <template>
-  <section class="contact-section">
-    <div class="badge-title">
-      SAIBA COMO CHEGAR
-    </div>    
+  <section id="contato" class="contact-section">
+    <div class="badge-title">SAIBA COMO CHEGAR ATÉ NÓS</div>    
     <div class="contact-content">
       <!-- Coluna de informações -->
       <div class="contact-info">
@@ -22,18 +20,34 @@
             <strong>Horário de funcionamento</strong>
           </div>
           <p>Segunda a sexta: 07:00–19:00<br>
-             Sábado: 08:00–14:00<br>
-             Domingo: Fechado
+             Sábado: 08:00–14:00  -  Domingo: Fechado
           </p>
         </div>
 
-        <!-- Telefone -->
+        <!-- Telefone + Botões -->
         <div class="info-item">
           <div class="icon-title">
             <i class="fas fa-phone-alt"></i>
             <strong>Telefone</strong>
           </div>
           <p>(11) 92074-4424</p>
+        </div>
+        <div class="info-item">
+                  <!-- Botões abaixo do telefone -->
+          <div class="button-group">
+            <a 
+              href="https://waze.com/ul?q=Av.%20Alexios%20Jafet%2C%201196%20-%20Jardim%20Ipanema%2C%20São%20Paulo%20-%20SP%2C%2005187-010&navigate=yes" 
+              target="_blank" 
+              class="btn waze">
+              <i class="fas fa-location-arrow"></i> Waze
+            </a>
+            <a 
+              href="https://www.instagram.com/clinicasaudeacessivel/" 
+              target="_blank" 
+              class="btn insta">
+              <i class="fab fa-instagram"></i> Instagram
+            </a>
+          </div>
         </div>
       </div>
 
@@ -84,7 +98,7 @@
 .contact-info {
   display: flex;
   flex-direction: column;
-  gap: 25px; /* aumento do gap */
+  gap: 25px;
   align-items: center;
   text-align: center;
 }
@@ -92,11 +106,11 @@
 .badge-title {
   position: relative;
   display: inline-block;
-  background-color: #555; /* Rosa vibrante */
+  background-color: #555;
   color: white;
   font-weight: 700;
   font-size: 24px;
-  padding: 12px 24px 12px 36px; /* espaço à esquerda */
+  padding: 12px 24px 12px 36px;
   border-radius: 2px;
   text-align: center;
   margin: 0 auto;
@@ -117,14 +131,13 @@
   margin-top: 12px;
 }
 
-/* Blocos de informação levemente maiores */
 .info-item {
   display: flex;
   flex-direction: column;
-  gap: 8px; /* maior gap entre elementos */
+  gap: 8px;
   font-weight: 600;
   background-color: #555;
-  padding: 22px 20px; /* padding maior */
+  padding: 12px 20px;
   border-radius: 15px;
   box-shadow: 0 5px 15px rgba(0,0,0,0.2);
   width: 100%;
@@ -142,22 +155,70 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: 8px; /* gap maior entre ícone e título */
+  gap: 8px;
 }
 
 .icon-title i {
-  font-size: 24px; /* ícones um pouco maiores */
+  font-size: 24px;
   color: #fff;
 }
 
 .info-item p {
-  font-size: 15px; /* texto um pouco maior */
+  font-size: 15px;
   margin: 0;
   line-height: 1.4;
 }
 
+/* Botões */
+.button-group {
+  display: flex;
+  gap: 10px;
+  margin-top: 10px;
+  width: 100%;
+  justify-content: center;
+}
+
+.btn {
+  flex: 1;
+  text-align: center;
+  padding: 10px 12px;
+  border-radius: 8px;
+  color: #fff;
+  text-decoration: none;
+  font-weight: bold;
+  transition: 0.3s;
+  background-color: #3a3a3a;
+  border: 1px solid #666;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+}
+
+.btn:hover {
+  background-color: #666;
+}
+
+.btn.waze {
+  background-color: #0099cc;
+  border-color: #0099cc;
+}
+
+.btn.waze:hover {
+  background-color: #007799;
+}
+
+.btn.insta {
+  background-color: #E1306C;
+  border-color: #E1306C;
+}
+
+.btn.insta:hover {
+  background-color: #C13584;
+}
+
 .contact-map {
-  height: 400px;
+  height: 430px;
   border-radius: 20px;
   overflow: hidden;
   box-shadow: 0 10px 30px rgba(0,0,0,0.3);

@@ -2,7 +2,7 @@
   <div class="app">
     <Navbar />
     <HeroCarousel />
-    <Contact />    
+    <BenefitsSection />
     <Plans />
     <Contact />
     <WhatsappButton />
@@ -15,9 +15,11 @@ import HeroCarousel from './components/HeroCarousel.vue'
 import Contact from './components/Contact.vue'
 import Plans from './components/Plans.vue'
 import WhatsappButton from './components/WhatsappButton.vue'
+import BenefitsSection from './components/BenefitsSection.vue'
 
 // Importa a logo do assets para usar como favicon
 import logo from './assets/logo.png'
+
 
 // Define favicon dinamicamente
 const link = document.createElement('link')
@@ -29,17 +31,12 @@ document.head.appendChild(link)
 
 <style>
 body {
-  min-height: 100vh;
   background: #f8944c;
   background-blend-mode: overlay;
   margin: 0;
-  padding: 0;
-  width: 100%;
-  overflow-x: hidden;
 }
 
 .app {
-  width: 100%;
   font-family: 'Montserrat', sans-serif;
 }
 </style>
