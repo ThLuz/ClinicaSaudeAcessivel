@@ -63,20 +63,20 @@ const prevSlide = () => currentIndex.value = (currentIndex.value - 1 + slides.le
 .carousel-track { display: flex; transition: transform 0.5s ease-in-out; }
 .carousel-slide { 
   min-width: 100%;
-  transform: scale(1.04);
+  height: 600px;
   filter: brightness(95%);
 }
 
 .carousel-slide img {
   width: 100%;
-  height: 600px; /* desktop */
+  height: 100%; /* desktop */
   object-fit: cover;
   border-top-left-radius: 20px;
   border-top-right-radius: 20px;
   border-bottom-left-radius: 0;
   border-bottom-right-radius: 0;
   transition: transform 0.3s ease, filter 0.3s ease;
-  filter: brightness(60%);
+  filter: brightness(80%);
 }
 
 /* Setas */

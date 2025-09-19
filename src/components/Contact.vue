@@ -2,6 +2,20 @@
   <section id="contato" class="contact-section">
     <div class="badge-title">SAIBA COMO CHEGAR ATÉ NÓS</div>    
     <div class="contact-content">
+      
+      <!-- Mapa -->
+      <div class="contact-map">
+        <iframe 
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3657.053924781612!2d-46.70122068448566!3d-23.55076918469125!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94ce5769a8c1b421%3A0x43a2f8d7f3a6d2a!2sAv.%20Alexios%20Jafet%2C%201196%20-%20Jardim%20Ipanema%2C%20S%C3%A3o%20Paulo%20-%20SP%2C%2005187-010!5e0!3m2!1spt-BR!2sbr!4v1694892160000!5m2!1spt-BR!2sbr"
+          width="100%" 
+          height="100%" 
+          style="border:0;" 
+          allowfullscreen="" 
+          loading="lazy" 
+          referrerpolicy="no-referrer-when-downgrade">
+        </iframe>
+      </div>
+
       <!-- Coluna de informações -->
       <div class="contact-info">
         <!-- Endereço -->
@@ -49,19 +63,6 @@
             </a>
           </div>
         </div>
-      </div>
-
-      <!-- Mapa -->
-      <div class="contact-map">
-        <iframe 
-          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3657.053924781612!2d-46.70122068448566!3d-23.55076918469125!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94ce5769a8c1b421%3A0x43a2f8d7f3a6d2a!2sAv.%20Alexios%20Jafet%2C%201196%20-%20Jardim%20Ipanema%2C%20S%C3%A3o%20Paulo%20-%20SP%2C%2005187-010!5e0!3m2!1spt-BR!2sbr!4v1694892160000!5m2!1spt-BR!2sbr"
-          width="100%" 
-          height="100%" 
-          style="border:0;" 
-          allowfullscreen="" 
-          loading="lazy" 
-          referrerpolicy="no-referrer-when-downgrade">
-        </iframe>
       </div>
     </div>
   </section>
