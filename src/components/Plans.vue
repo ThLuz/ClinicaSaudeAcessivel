@@ -1,199 +1,199 @@
-<template> 
+<template>
   <section id="planos" class="planos-section">
     <div class="planos-header">
       <div class="badge-title">
-        PLANOS QUE CABEM NO SEU ORÇAMENTO
+        PLANOS ODONTOLÓGICOS QUE CABEM NO SEU ORÇAMENTO
       </div>
     </div>
+
     <div class="planos-cards">
       <!-- Plano Vital -->
       <div class="plano-card vital">
         <img src="../assets/item1.png" alt="Vital" />
-        <h4 class="plano-title vital">VITAL</h4>
-        <p class="plano-price">R$ 19,90 <span>/mês</span></p>
+        <h4 class="plano-title vital">ORTO VITAL</h4>
+
+        <div class="plano-values">
+          <div class="value-box">
+            <span class="label">Adesão</span>
+            <strong>R$ 50,00</strong>
+          </div>
+          <div class="value-box destaque vital">
+            <span class="label">Mensalidade</span>
+            <strong>R$ 110,00 <span>/mês</span></strong>
+          </div>
+        </div>
+
         <ul class="plano-items vital">
-          <li class="yes">Consultas com clínico geral por R$29,90</li>
-          <li class="yes">Especialidades a partir de R$ 59,90</li>
-          <li class="yes">Retorno gratuito com clínico geral dentro de 30 dias</li>
-          <li class="no">Inclusão de até 4 dependentes sem custo</li>
+          <li>Instalação do aparelho</li>
+          <li>Manutenção</li>
+          <li>Remoção e limpeza ao fim do tratamento</li>
+          <li>Procedimentos clínicos: 10% de desconto</li>
+          <li>Colagem de brackets de R$10,00 por R$5,00</li>
+          <li></li>
         </ul>
+
         <button class="btn vital">ASSINAR PLANO</button>
       </div>
 
-      <!-- Plano Vital Plus -->
+      <!-- Plano Vital Premium -->
       <div class="plano-card plus">
         <img src="../assets/item2.png" alt="Vital Plus" />
-        <h4 class="plano-title plus">VITAL PLUS</h4>
-        <p class="plano-price">R$ 49,90 <span>/mês</span></p>
-        <ul class="plano-items plus">
-          <li class="yes">Consultas com clínico geral por R$29,90</li>
-          <li class="yes">Especialidades a partir de R$ 59,90</li>
-          <li class="yes">Retorno gratuito com clínico geral dentro de 30 dias</li>
-          <li class="yes">Inclusão de até 4 dependentes sem custo</li>
-        </ul>
-        <button class="btn plus">ASSINAR PLANO</button>
-      </div>
+        <h4 class="plano-title plus">ORTO VITAL PREMIUM</h4>
 
-      <!-- Plano Vital Premium -->
-      <div class="plano-card premium popular">
-        <div class="popular-badge">MAIS POPULAR</div>
-        <img src="../assets/item3.png" alt="Vital Premium" />
-        <h4 class="plano-title premium">VITAL PREMIUM</h4>
-        <p class="plano-price">R$ 79,90 <span>/mês</span></p>
-        <ul class="plano-items popular">
-          <li class="yes">Consultas com clínico geral por R$29,90</li>
-          <li class="yes">Especialidades a partir de R$ 59,90</li>
-          <li class="yes">Retorno gratuito com clínico geral dentro de 30 dias</li>
-          <li class="yes">Inclusão de até 4 dependentes sem custo</li>
+        <div class="plano-values">
+          <div class="value-box">
+            <span class="label">Adesão</span>
+            <strong>R$ 50,00</strong>
+          </div>
+          <div class="value-box destaque plus">
+            <span class="label">Mensalidade</span>
+            <strong>R$ 140,00 <span>/mês</span></strong>
+          </div>
+        </div>
+
+        <ul class="plano-items plus">
+          <li>Instalação do aparelho</li>
+          <li>Manutenção</li>
+          <li>Remoção e limpeza ao fim do tratamento</li>
+          <li>Procedimentos clínicos: 10% de desconto</li>
+          <li>Colagem de brackets de R$10,00 por R$5,00</li>
+          <li>Clareamento caseiro ao fim do tratamento</li>
         </ul>
-        <button class="btn popular">ASSINAR PLANO</button>
+
+        <button class="btn plus">ASSINAR PLANO</button>
       </div>
     </div>
   </section>
 </template>
 
 <script setup>
-// Sem lógica dinâmica por enquanto
+/* sem lógica dinâmica */
 </script>
 
 <style scoped>
 .planos-section {
-  padding: 60px 20px;
-  background-color: #fce2d6; /* fundo claro */
+  padding: 30px 10px; /* ⬅️ menor */
+  background-color: #fce2d6;
   font-family: 'Montserrat', sans-serif;
   text-align: center;
 }
 
-.planos-header h1 {
-  margin-bottom: 10px;
+/* HEADER */
+.badge-title {
+  background-color: #ff7f32;
+  color: #fff;
+  font-weight: 700;
+  font-size: 20px; /* ⬅️ menor */
+  padding: 10px 22px;
+  border-radius: 8px;
+  margin-bottom: 35px;
+  display: inline-block;
 }
 
-
+/* CARDS */
 .planos-cards {
   display: flex;
   justify-content: center;
-  gap: 20px;
+  gap: 32px; /* ⬅️ menor */
   flex-wrap: wrap;
 }
 
 .plano-card {
   background-color: #fff;
   border-radius: 20px;
-  padding: 25px 20px;
-  width: 280px;
-  position: relative;
+  padding: 24px 20px; /* ⬅️ menor */
+  width: 350px;       /* ⬅️ menor */
   display: flex;
   flex-direction: column;
   align-items: center;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-  box-shadow: 0 8px 25px rgba(0,0,0,0.15);
+  box-shadow: 0 8px 24px rgba(0,0,0,0.14);
+  transition: transform 0.3s ease;
 }
 
 .plano-card:hover {
   transform: translateY(-5px);
 }
 
-.badge-title {
-  position: relative;
-  display: inline-block;
-  background-color: #ff7f32; /* Rosa vibrante */
-  color: white;
-  font-weight: 700;
-  font-size: 24px;
-  padding: 12px 24px 12px 36px; /* espaço à esquerda */
-  border-radius: 6px;
-  text-align: center;
-  margin: 0 auto;
-  margin-bottom: 50px;
-}
-
-.badge-title::before {
-  content: "";
-  position: absolute;
-  left: 0;
-  top: 0;
-  width: 0;
-  height: 0;
-  border-top: 18px solid transparent;
-  border-bottom: 18px solid transparent;
-  border-right: 18px solid #ff7f32;
-  transform: translateX(-80%);
-  margin-top: 12px;
-}
-
-
-/* Sombra colorida por tipo de plano - versão mais leve */
+/* SOMBRAS */
 .plano-card.vital {
-  box-shadow: 0 6px 15px rgba(76, 175, 80, 0.2);
+  box-shadow: 0 8px 20px rgba(10, 158, 108, 0.22);
 }
+
 .plano-card.plus {
-  box-shadow: 0 6px 15px rgba(33, 150, 243, 0.2);
-}
-.plano-card.premium {
-  box-shadow: 0 6px 15px rgba(255, 127, 50, 0.2);
+  box-shadow: 0 8px 20px rgba(19, 136, 229, 0.22);
 }
 
-.popular .popular-badge {
-  position: absolute;
-  top: -10px;
-  right: -10px;
-  background-color: #ff7f32;
-  color: #fff;
-  font-size: 14px;
-  padding: 5px 10px;
-  border-radius: 12px;
-  font-weight: 600;
-}
-
+/* IMAGEM */
 .plano-card img {
-  width: 50%;      
-  height: auto;
-  margin-bottom: 0px;
-  border-radius: 12px;
+  width: 52%; /* ⬅️ menor */
+  margin-bottom: 4px;
 }
 
+/* TÍTULO */
 .plano-title {
-  font-size: 30px;
-  font-weight: 600;
-  margin-bottom: 0px;
-}
-
-/* Cores do título combinando com a sombra */
-.plano-title.vital { color: #0A9E6C; }
-.plano-title.plus { color: #1388E5; }
-.plano-title.premium { color: #F47521; }
-
-.btn.vital { background-color: #0A9E6C; }
-.btn.plus { background-color: #1388E5; }
-.btn.popular { background-color: #F47521; }
-
-.plano-price {
-  font-size: 24px;
+  font-size: 26px; /* ⬅️ menor */
   font-weight: 700;
-  margin-bottom: 15px;
-  color: #333;
+  margin-bottom: 6px;
 }
 
-.plano-price span {
-  font-size: 14px;
-  font-weight: 400;
+.plano-title.vital { color: #0A9E6C; }
+.plano-title.plus  { color: #1388E5; }
+
+/* VALORES */
+.plano-values {
+  display: flex;
+  gap: 12px;
+  margin-bottom: 6px;
+}
+
+.value-box {
+  border: 1px solid #eee;
+  border-radius: 12px;
+  padding: 10px 14px;
+  min-width: 140px;
+
+  display: flex;              /* 🔥 força layout correto */
+  flex-direction: column;     /* 🔥 quebra linha sempre */
+  align-items: center;        /* centraliza */
+  text-align: center;
+  color: #777;
+}
+
+
+.value-box .label {
+  font-size: 12px;
+  color: #777;
+  margin-bottom: 4px;
+  display: block;             /* reforço */
+}
+
+
+.value-box strong {
+  font-size: 18px;
+}
+
+.value-box strong span {
+  font-size: 12px;
+}
+
+.value-box.destaque.vital { border-color: #0A9E6C; }
+.value-box.destaque.plus  { border-color: #1388E5; }
+
+/* LISTA */
+.plano-items {
+  list-style: none;
+  padding: 0;
+  margin-bottom: 20px;
+  width: 100%;
+  text-align: left;
   color: #6b5e57;
 }
 
-.plano-items {
-  text-align: left;
-  padding-left: 0;
-  list-style: none;
-  margin-bottom: 20px;
-  width: 100%;
-}
-
 .plano-items li {
+  font-size: 13px; /* ⬅️ menor */
   margin-bottom: 8px;
-  font-size: 14px;
-  color: #555;
-  position: relative;
   padding-left: 20px;
+  position: relative;
 }
 
 .plano-items li::before {
@@ -204,41 +204,90 @@
 }
 
 .plano-items.vital li::before { color: #0A9E6C; }
-.plano-items.plus li::before{ color: #1388E5; }
-.plano-items.popular li::before { color: #F47521; }
+.plano-items.plus li::before  { color: #1388E5; }
 
+.plano-items li:empty::before {
+  content: none;
+}
+
+.plano-items li:empty {
+  min-height: 20px;
+}
+
+/* BOTÃO */
 .btn {
-  background-color: #ff7f32;
+  width: 100%;
+  padding: 10px; /* ⬅️ menor */
+  border-radius: 12px;
+  border: none;
   color: #fff;
   font-weight: 600;
-  border: none;
-  border-radius: 12px;
-  padding: 10px 20px;
+  font-size: 14px;
   cursor: pointer;
-  transition: background-color 0.3s ease;
-  width: 95%;
 }
 
-.btn.vital:hover {
-  background-color: #0c8a60;
-}
-.btn.plus:hover {
-  background-color: #0a7dc9;
-}
-.btn.popular:hover {
-  background-color: #e06a1b;
+.btn.vital { background-color: #0A9E6C; }
+.btn.plus  { background-color: #1388E5; }
+
+.btn.vital:hover { background-color: #0c8a60; }
+.btn.plus:hover  { background-color: #0a7dc9; }
+
+.photo-1 {
+  grid-column: 2;
+  grid-row: 1;
+  height: 120px;
+  background-image: url('@/assets/about1.jpeg');
 }
 
-/* Mobile */
+.photo-2 {
+  grid-column: 1;
+  grid-row: 2;
+  background-image: url('@/assets/about2.jpeg');
+}
+
+.photo-3 {
+  grid-column: 2;
+  grid-row: 2;
+  height: 150px;
+  background-image: url('@/assets/about3.jpeg');
+}
+
+.photo-4 {
+  grid-column: 3;
+  grid-row: 2;
+  background-image: url('@/assets/about4.jpeg');
+}
+
+.photo-5 {
+  grid-column: 1;
+  grid-row: 3;
+  height: 120px;
+  background-image: url('@/assets/about5.jpg');
+}
+
+.photo-6 {
+  grid-column: 3;
+  grid-row: 3;
+  height: 120px;
+  background-image: url('@/assets/about6.jpg');
+}
+
+
+/* MOBILE */
 @media (max-width: 768px) {
-  .planos-cards {
+  .plano-values {
     flex-direction: column;
-    align-items: center;
+    width: 100%;
+  }
+
+  .value-box {
+    width: 100%;
+    text-align: center;
   }
 
   .plano-card {
-    width: 90%;
-    max-width: 350px;
+    width: 92%;
+    max-width: 340px;
   }
 }
 </style>

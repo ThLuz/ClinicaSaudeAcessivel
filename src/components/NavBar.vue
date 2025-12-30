@@ -12,8 +12,7 @@
           <a href="#inicio" :class="{ active: activeLink === 'inicio' }" @click="setActive('inicio')">INÍCIO</a>
           <a href="#servicos" :class="{ active: activeLink === 'servicos' }" @click="setActive('servicos')">SERVIÇOS</a>
           <a href="#planos" :class="{ active: activeLink === 'planos' }" @click="setActive('planos')">PLANOS</a>
-          <a href="#empresa1" :class="{ active: activeLink === 'empresa1' }" @click="setActive('empresa1')">PLANOS EMPRESARIAIS</a>
-          <a href="#empresa2" :class="{ active: activeLink === 'empresa2' }" @click="setActive('empresa2')">SOBRE NÓS</a>
+          <a href="#about" :class="{ active: activeLink === 'about' }" @click="setActive('about')">SOBRE NÓS</a>
           <a href="#contato" :class="{ active: activeLink === 'contato' }" @click="setActive('contato')">CONTATO</a>
         </nav>
 

@@ -49,32 +49,26 @@ const prevSlide = () => currentIndex.value = (currentIndex.value - 1 + slides.le
   overflow: hidden;
   position: relative;
   box-shadow: 0 10px 30px rgba(0,0,0,0.2);
-  margin-top: 30px;
-  border-radius: 20px;
+  margin-top: 32px;
 }
 
 .back{
-  padding: 20px;
-  background-color: #fce2d6;
+  background-color: #eee;
   box-shadow: 8px 0 20px rgba(0, 0, 0, 0.2), /* sombra direita */
               -8px 0 20px rgba(0, 0, 0, 0.2); /* sombra esquerda */
 }
 
 .carousel-track { display: flex; transition: transform 0.5s ease-in-out; }
-.carousel-slide { 
-  min-width: 100%;
+.carousel-slide {
+  min-width: 100vw;        /* cada slide ocupa toda a largura */
   height: 600px;
-  filter: brightness(95%);
 }
 
 .carousel-slide img {
   width: 100%;
   height: 100%; /* desktop */
   object-fit: cover;
-  border-top-left-radius: 20px;
-  border-top-right-radius: 20px;
-  border-bottom-left-radius: 0;
-  border-bottom-right-radius: 0;
+
   transition: transform 0.3s ease, filter 0.3s ease;
   filter: brightness(80%);
 }
