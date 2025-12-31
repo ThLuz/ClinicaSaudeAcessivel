@@ -1,6 +1,6 @@
 <template>
   <div class="back">
-    <div id="inicio" class="carousel">
+    <div id="home" class="carousel">
       <div class="carousel-track" :style="{ transform: `translateX(-${currentIndex * 100}%)` }">
         <div class="carousel-slide" v-for="(slide, index) in slides" :key="index">
           <img :src="slide" alt="Slide" />
@@ -28,8 +28,9 @@ import { ref } from 'vue'
 import img1 from '../assets/imagem1.jpg'
 import img2 from '../assets/imagem2.jpg'
 import img3 from '../assets/imagem3.jpg'
+import img4 from '../assets/imagem4.jpg'
 
-const slides = [img1, img2, img3]
+const slides = [img1, img2, img3, img4]
 const currentIndex = ref(0)
 
 const nextSlide = () => currentIndex.value = (currentIndex.value + 1) % slides.length
@@ -43,42 +44,47 @@ const prevSlide = () => currentIndex.value = (currentIndex.value - 1 + slides.le
   padding: 0;
 }
 
+.back {
+  background-color: #eee;
+  box-shadow: 8px 0 20px rgba(0, 0, 0, 0.2),
+              -8px 0 20px rgba(0, 0, 0, 0.2);
+}
+
+/* ===== CAROUSEL ===== */
 .carousel {
   width: 100%;
-  margin: 0 auto;
   overflow: hidden;
   position: relative;
-  box-shadow: 0 10px 30px rgba(0,0,0,0.2);
   margin-top: 32px;
 }
 
-.back{
-  background-color: #eee;
-  box-shadow: 8px 0 20px rgba(0, 0, 0, 0.2), /* sombra direita */
-              -8px 0 20px rgba(0, 0, 0, 0.2); /* sombra esquerda */
+.carousel-track {
+  display: flex;
+  transition: transform 0.5s ease-in-out;
 }
 
-.carousel-track { display: flex; transition: transform 0.5s ease-in-out; }
+/* Cada slide ocupa 100% */
 .carousel-slide {
-  min-width: 100vw;        /* cada slide ocupa toda a largura */
-  height: 600px;
+  min-width: 100%;
+  position: relative;
 }
 
+/* Imagem padrão (desktop) */
 .carousel-slide img {
   width: 100%;
-  height: 100%; /* desktop */
+  height: 600px;
   object-fit: cover;
-
-  transition: transform 0.3s ease, filter 0.3s ease;
+  display: block;
   filter: brightness(80%);
+  transition: transform 0.3s ease, filter 0.3s ease;
 }
 
-/* Setas */
+/* ===== SETAS ===== */
 .arrow {
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
-  background: rgba(255, 255, 255, 0.377);
+  background: rgba(255, 255, 255, 0.4);
   border: none;
   border-radius: 50%;
   width: 55px;
@@ -87,16 +93,18 @@ const prevSlide = () => currentIndex.value = (currentIndex.value - 1 + slides.le
   align-items: center;
   justify-content: center;
   cursor: pointer;
-  transition: all 0.3s ease;
   z-index: 2;
-  box-shadow: 0 4px 20px rgba(0,0,0,0.25);
 }
 
-.arrow span { font-size: 28px; color: #333; }
+.arrow span {
+  font-size: 28px;
+  color: #333;
+}
+
 .arrow.left { left: 12px; }
 .arrow.right { right: 12px; }
 
-/* Dots */
+/* ===== DOTS ===== */
 .dots {
   position: absolute;
   bottom: 16px;
@@ -105,31 +113,70 @@ const prevSlide = () => currentIndex.value = (currentIndex.value - 1 + slides.le
   display: flex;
   gap: 12px;
 }
+
 .dots span {
   width: 14px;
   height: 14px;
   background: rgba(255,255,255,0.8);
   border-radius: 50%;
   cursor: pointer;
-  transition: all 0.3s ease;
 }
+
 .dots span.active {
   background: #ff7f32;
   transform: scale(1.4);
 }
 
-/* Mobile */
+/* ===================== */
+/* 📱 MOBILE AJUSTADO */
+/* ===================== */
 @media (max-width: 768px) {
-  .carousel-slide img { height: 600px; }
-  .arrow { width: 45px; height: 45px; }
-  .arrow span { font-size: 22px; }
-  .dots span { width: 12px; height: 12px; }
+
+  .carousel-slide {
+    height: 450px;
+    overflow: hidden;
+  }
+
+  .carousel-slide img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+
+    /* 🔑 CONTROLE DE ESTICADA */
+    transform: scale(1.25, 2.90); /* X, Y */
+
+    transform-origin: center center;
+  }
+
+  .arrow {
+    width: 44px;
+    height: 44px;
+  }
+
+  .arrow span {
+    font-size: 22px;
+  }
 }
 
 @media (max-width: 480px) {
-  .carousel-slide img { height: 400px;}
-  .arrow { width: 35px; height: 35px; }
-  .arrow span { font-size: 18px; }
-  .dots span { width: 10px; height: 10px; }
+
+  .carousel-slide img {
+    aspect-ratio: 4 / 3; /* fica melhor em celular */
+  }
+
+  .arrow {
+    width: 36px;
+    height: 36px;
+  }
+
+  .arrow span {
+    font-size: 18px;
+  }
+
+  .dots span {
+    width: 10px;
+    height: 10px;
+  }
 }
+
 </style>

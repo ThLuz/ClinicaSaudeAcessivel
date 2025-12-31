@@ -149,14 +149,33 @@ import about9 from '../assets/about9.jpeg'
     grid-template-columns: 1fr;
   }
 
+  .about-photos .photo:last-child {
+    display: none;
+  }
+
   .about-text {
     text-align: center;
-    padding: 50px 30px;
-    background-size: 220px;
+    padding: 40px 20px;
+    background-size: 240px; /* aumenta a logo */
   }
 
   .about-photos {
-    padding: 30px;
+    padding: 20px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+    gap: 16px;
+  }
+
+  .photo {
+    aspect-ratio: 1 / 1;
+    border-radius: 18px;
+    background-size: cover;
+    background-position: center;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+    width: 100%;
+    height: auto; /* deixa a altura proporcional à largura */
+    min-height: 150px; /* garante tamanho mínimo */
   }
 }
+
 </style>

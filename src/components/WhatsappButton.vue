@@ -1,7 +1,7 @@
 <template>
   <a
     class="whatsapp-button"
-    href="https://wa.me/5511990274243"
+    :href="whatsappLink"
     target="_blank"
     rel="noopener noreferrer"
     aria-label="Fale conosco no WhatsApp"
@@ -20,7 +20,12 @@
 </template>
 
 <script setup>
-// Número fixo inserido diretamente no href
+const phone = '5511990274243';
+
+const message =
+  'Olá, vim pelo site da Clínica Saúde Acessível e gostaria de mais informações.';
+
+const whatsappLink = `https://wa.me/${phone}?text=${encodeURIComponent(message)}`;
 </script>
 
 <style scoped>

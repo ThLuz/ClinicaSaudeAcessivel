@@ -8,6 +8,7 @@
     <Partners />
     <About />        
     <Contact />
+    <Footer />
     <WhatsappButton />
   </div>
 </template>
@@ -22,10 +23,10 @@ import BenefitsSection from './components/BenefitsSection.vue'
 import Partners from './components/Partners.vue'
 import About from './components/About.vue'
 import WhyChoose from './components/WhyChoose.vue'
+import Footer from './components/Footer.vue'
 
 // Importa a logo do assets para usar como favicon
-import logo from './assets/logo.png'
-
+import logo from './assets/logotitle.png'
 
 // Define favicon dinamicamente
 const link = document.createElement('link')
@@ -36,23 +37,55 @@ document.head.appendChild(link)
 </script>
 
 <style>
+/* ================= RESET GLOBAL ================= */
+html, body {
+  width: 100%;
+  max-width: 100%;
+  overflow-x: hidden;
+}
+
 body {
   background: #f8944c;
   background-blend-mode: overlay;
   margin: 0;
-  overflow-x: hidden;
 }
 
+/* ================= APP ================= */
 .app {
   font-family: 'Montserrat', sans-serif;
-  max-width: 1280px;   /* controla o "espremer" */
-  margin: 0 auto;      /* centraliza e cria laterais vazias */
-  padding: 0 20px;     /* respiro interno */
+
+  width: 100%;
+  max-width: 1280px;      /* desktop */
+  margin: 0 auto;
+  padding: 0 20px;
+
+  overflow-x: hidden;     /* 🔥 trava arraste lateral */
 }
 
-* {
+/* ================= SEGURANÇA GLOBAL ================= */
+*,
+*::before,
+*::after {
   box-sizing: border-box;
+  max-width: 100%;
 }
 
+img,
+video,
+iframe {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
 
+/* ================= MOBILE ================= */
+@media (max-width: 768px) {
+  .app {
+    max-width: none;      /* 🔥 libera full width */
+    width: 100%;
+    padding: 0;
+    margin: 0;
+    overflow-x: hidden;
+  }
+}
 </style>

@@ -9,11 +9,11 @@
 
         <!-- LINKS DE NAVEGAÇÃO -->
         <nav :class="['nav-links', { open: isMenuOpen }]">
-          <a href="#inicio" :class="{ active: activeLink === 'inicio' }" @click="setActive('inicio')">INÍCIO</a>
-          <a href="#servicos" :class="{ active: activeLink === 'servicos' }" @click="setActive('servicos')">SERVIÇOS</a>
-          <a href="#planos" :class="{ active: activeLink === 'planos' }" @click="setActive('planos')">PLANOS</a>
+          <a href="#home" :class="{ active: activeLink === 'home' }" @click="setActive('home')">INÍCIO</a>
+          <a href="#services" :class="{ active: activeLink === 'services' }" @click="setActive('services')">SERVIÇOS</a>
+          <a href="#plans" :class="{ active: activeLink === 'plans' }" @click="setActive('plans')">PLANOS</a>
           <a href="#about" :class="{ active: activeLink === 'about' }" @click="setActive('about')">SOBRE NÓS</a>
-          <a href="#contato" :class="{ active: activeLink === 'contato' }" @click="setActive('contato')">CONTATO</a>
+          <a href="#contact" :class="{ active: activeLink === 'contact' }" @click="setActive('contact')">CONTATO</a>
         </nav>
 
         <!-- BOTÃO MENU MOBILE -->
@@ -31,7 +31,7 @@ export default {
   data() {
     return {
       isMenuOpen: false,
-      activeLink: 'inicio', // link inicial ativo
+      activeLink: 'home', // link inicial ativo
     };
   },
   methods: {
@@ -43,7 +43,7 @@ export default {
       this.isMenuOpen = false; // fecha menu mobile
     },
     onScroll() {
-      const sections = ['inicio', 'servicos', 'planos', 'empresa1', 'empresa2', 'contato'];
+      const sections = ['home', 'services', 'plans', 'about', 'contact'];
       const scrollPos = window.scrollY + 80; // 80px = altura navbar + margem de segurança
 
       for (let i = sections.length - 1; i >= 0; i--) {

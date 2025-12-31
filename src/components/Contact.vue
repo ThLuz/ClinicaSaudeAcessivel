@@ -1,5 +1,5 @@
 <template>
-  <section id="contato" class="contact-section">
+  <section id="contact" class="contact-section">
     <div class="badge-title">SAIBA COMO CHEGAR ATÉ NÓS</div>    
     <div class="contact-content">
       
@@ -229,7 +229,7 @@
 }
 
 /* Mobile */
-@media (max-width: 1024px) {
+@media (max-width: 780px) {
   .contact-content {
     flex-direction: column;
     align-items: center;
@@ -247,6 +247,11 @@
  
   .contact-section h2 {
     font-size: 25px;
+  }
+
+  .badge-title{
+    font-size: 20px;
+    padding: 12px;
   }
 }
 </style>

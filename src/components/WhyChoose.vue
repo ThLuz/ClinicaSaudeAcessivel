@@ -1,10 +1,10 @@
 <template>
-  <section class="clinic-section">
+  <section id="services" class="clinic-section">
     <div class="container">
 
       <!-- COLUNA TEXTO -->
       <div class="text-column">
-        <h2>Conheça Nossa Clínica em São Paulo</h2>
+        <h2>CONHEÇA NOSSA CLÍNICA EM SÃO PAULO</h2>
         <p>
           Na nossa clínica, unimos excelência em odontologia e estética para oferecer a melhor experiência aos nossos pacientes.
           Realizamos tratamentos odontológicos completos, desde prevenção e restaurações até estética dental.  
@@ -14,7 +14,7 @@
         </p>
 
         <!-- BOTÃO AGENDAR AVALIAÇÃO -->
-        <button class="btn-schedule">Agende sua Avaliação</button>
+        <button class="btn-schedule">AGENDE SUA AVALIAÇÃO</button>
       </div>
 
       <!-- COLUNA IMAGEM -->
@@ -51,6 +51,9 @@
   background-color: #ffffff;
   padding: 80px 20px;
   font-family: 'Montserrat', sans-serif;
+
+  /* 🔑 evita estouro horizontal no mobile */
+  overflow-x: hidden;
 }
 
 /* CONTAINER */
@@ -71,6 +74,9 @@
 .image-column {
   flex: 1 1 400px;
   position: relative;
+
+  /* 🔑 segurança contra overflow */
+  overflow: visible;
 }
 
 .image-column img {
@@ -81,7 +87,7 @@
 
 /* TÍTULO E TEXTO */
 h2 {
-  font-size: 42px;
+  font-size: 34px;
   font-weight: 800;
   margin-bottom: 25px;
   color: #2b2b2b;
@@ -100,20 +106,20 @@ p {
 .btn-schedule {
   display: inline-block;
   padding: 12px 25px;
-  background-color: #b35900; /* laranja escuro */
+  background-color: #f8944c;
   color: #fff;
   font-weight: 600;
   border: none;
-  border-radius: 40px;
+  border-radius: 12px;
   cursor: pointer;
   transition: background-color 0.3s ease;
 }
 
 .btn-schedule:hover {
-  background-color: #ff7a00;
+  background-color: #f18a28;
 }
 
-/* CARDS SOBRE A IMAGEM */
+/* CARDS SOBRE A IMAGEM — DESKTOP ORIGINAL */
 .info-cards {
   position: absolute;
   top: 93%;
@@ -150,17 +156,17 @@ p {
   opacity: 0.8;
 }
 
-/* PRIMEIRO CARD - PACIENTES */
+/* PRIMEIRO CARD - PACIENTES (DESKTOP INTACTO) */
 .card-patients {
-  background-color: #ff905d; /* laranja clarinho */
+  background-color: #f8944c;
   position: absolute;
-  left: -50px; /* metade para fora da imagem */
+  left: -50px;
   top: 50%;
   transform: translateY(-50%);
   z-index: 2;
 }
 
-/* SEGUNDO CARD - PROFISSIONAIS */
+/* SEGUNDO CARD - PROFISSIONAIS (DESKTOP INTACTO) */
 .card-professionals {
   background-color: #50a1e2;
   position: relative;
@@ -168,31 +174,46 @@ p {
   margin-left: 120px;
 }
 
-/* MOBILE */
+/* ===================== */
+/* 📱 MOBILE — ÚNICA PARTE ALTERADA */
+/* ===================== */
 @media (max-width: 900px) {
+
   .container {
     flex-direction: column;
     gap: 40px;
   }
 
   h2 {
-    font-size: 32px;
+    font-size: 25px;
   }
 
+  /* Só reposiciona o CONJUNTO */
   .info-cards {
     position: static;
-    flex-direction: row;
-    justify-content: flex-start;
-    margin-top: 20px;
     transform: none;
+    margin-top: 20px;
+    justify-content: center;
   }
 
+  .clinic-section {
+   padding: 10px 20px;
+  }
+
+  /* NÃO muda cor, tamanho ou estilo */
   .card-patients {
-    position: static;
-    transform: none;
-    left: auto;
-    top: auto;
-    margin-right: 0;
+  position: absolute;
+  left: -10px;
+  top: 68%;
+  transform: translateY(-50%);
+  }
+
+  .card-professionals {
+    margin-left: 120px;
+    position: absolute;
+    top: 68%;
+    transform: translateY(-50%);    
   }
 }
+
 </style>

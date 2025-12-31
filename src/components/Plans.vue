@@ -1,8 +1,8 @@
 <template>
-  <section id="planos" class="planos-section">
+  <section id="plans" class="planos-section">
     <div class="planos-header">
       <div class="badge-title">
-        PLANOS ODONTOLÓGICOS QUE CABEM NO SEU ORÇAMENTO
+        PLANOS ODONTOLÓGICOS
       </div>
     </div>
 
@@ -32,7 +32,7 @@
           <li></li>
         </ul>
 
-        <button class="btn vital">ASSINAR PLANO</button>
+        <button class="btn vital"  @click="assinarPlano('ORTO VITAL')">ASSINAR PLANO</button>
       </div>
 
       <!-- Plano Vital Premium -->
@@ -60,15 +60,22 @@
           <li>Clareamento caseiro ao fim do tratamento</li>
         </ul>
 
-        <button class="btn plus">ASSINAR PLANO</button>
+        <button class="btn plus"  @click="assinarPlano('ORTO VITAL PREMIUM')">ASSINAR PLANO</button>
       </div>
     </div>
   </section>
 </template>
 
 <script setup>
-/* sem lógica dinâmica */
+const whatsappNumber = '5511992880520';
+
+function assinarPlano(plano) {
+  const message = `Olá, gostaria de mais informações sobre o plano ${plano}.`;
+  const url = `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(message)}`;
+  window.open(url, '_blank');
+}
 </script>
+
 
 <style scoped>
 .planos-section {
@@ -83,7 +90,7 @@
   background-color: #ff7f32;
   color: #fff;
   font-weight: 700;
-  font-size: 20px; /* ⬅️ menor */
+  font-size: 26px; /* ⬅️ menor */
   padding: 10px 22px;
   border-radius: 8px;
   margin-bottom: 35px;
@@ -274,20 +281,57 @@
 
 
 /* MOBILE */
-@media (max-width: 768px) {
+@media (max-width: 780px) {
+  /* PLANOS */
   .plano-values {
-    flex-direction: column;
-    width: 100%;
+    flex-direction: row;
+    justify-content: center;
+    gap: 8px;
+  }
+
+  .badge-title {
+    font-size: 20px;
   }
 
   .value-box {
-    width: 100%;
-    text-align: center;
+    min-width: 100px;
+    padding: 6px 8px;
+    font-size: 12px;
   }
 
   .plano-card {
-    width: 92%;
-    max-width: 340px;
+    width: 80%;
+    padding: 16px;
+  }
+
+  .plano-title {
+    font-size: 20px;
+  }
+
+  .plano-items li {
+    font-size: 12px;
+    margin-bottom: 6px;
+  }
+
+  .btn {
+    font-size: 13px;
+    padding: 8px;
+  }
+
+  /* ABOUT PHOTOS: sempre 2 colunas, sem esconder fotos */
+  .about-photos {
+    display: grid !important;
+    grid-template-columns: repeat(2, 1fr); /* duas colunas fixas */
+    gap: 16px;
+    padding: 20px;
+  }
+
+  .about-photos .photo {
+    width: 100%;
+    min-height: 150px;
+    aspect-ratio: 1 / 1; /* mantém quadrado */
   }
 }
+
+
 </style>
