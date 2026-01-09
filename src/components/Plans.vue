@@ -25,11 +25,10 @@
 
         <ul class="plano-items vital">
           <li>Instalação do aparelho</li>
-          <li>Manutenção</li>
+          <li>01 manutenção mensal</li>
           <li>Remoção e limpeza ao fim do tratamento</li>
           <li>Procedimentos clínicos: 10% de desconto</li>
           <li>Colagem de brackets de R$10,00 por R$5,00</li>
-          <li></li>
         </ul>
 
         <button class="btn vital"  @click="assinarPlano('ORTO VITAL')">ASSINAR PLANO</button>
@@ -37,7 +36,7 @@
 
       <!-- Plano Vital Premium -->
       <div class="plano-card plus">
-        <img src="../assets/item2.png" alt="Vital Plus" />
+        <img src="../assets/item3.png" alt="Vital Plus" />
         <h4 class="plano-title plus">ORTO VITAL PREMIUM</h4>
 
         <div class="plano-values">
@@ -52,11 +51,11 @@
         </div>
 
         <ul class="plano-items plus">
-          <li>Instalação do aparelho</li>
-          <li>Manutenção</li>
-          <li>Remoção e limpeza ao fim do tratamento</li>
-          <li>Procedimentos clínicos: 10% de desconto</li>
-          <li>Colagem de brackets de R$10,00 por R$5,00</li>
+          <li>Instalação, remoção e limpeza ao fim do tratamento inclusos (gratuitos)</li>
+          <li>Documentação inclusa</li>
+          <li>01 manutenção mensal</li>
+          <li>Todos os procedimentos clínicos com 20% de desconto</li>
+          <li>Colagem de brackets sem custo adicional</li>
           <li>Clareamento caseiro ao fim do tratamento</li>
         </ul>
 
@@ -101,15 +100,15 @@ function assinarPlano(plano) {
 .planos-cards {
   display: flex;
   justify-content: center;
-  gap: 32px; /* ⬅️ menor */
+  gap: 32px;
   flex-wrap: wrap;
 }
 
 .plano-card {
   background-color: #fff;
   border-radius: 20px;
-  padding: 24px 20px; /* ⬅️ menor */
-  width: 350px;       /* ⬅️ menor */
+  padding: 18px 16px; 
+  width: 350px;       
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -127,7 +126,7 @@ function assinarPlano(plano) {
 }
 
 .plano-card.plus {
-  box-shadow: 0 8px 20px rgba(19, 136, 229, 0.22);
+  box-shadow: 0 8px 20px rgba(245, 121, 20, 0.22);
 }
 
 /* IMAGEM */
@@ -144,7 +143,7 @@ function assinarPlano(plano) {
 }
 
 .plano-title.vital { color: #0A9E6C; }
-.plano-title.plus  { color: #1388E5; }
+.plano-title.plus  { color: #ff7f32; }
 
 /* VALORES */
 .plano-values {
@@ -184,7 +183,7 @@ function assinarPlano(plano) {
 }
 
 .value-box.destaque.vital { border-color: #0A9E6C; }
-.value-box.destaque.plus  { border-color: #1388E5; }
+.value-box.destaque.plus  { border-color: #ff7f32; }
 
 /* LISTA */
 .plano-items {
@@ -211,7 +210,7 @@ function assinarPlano(plano) {
 }
 
 .plano-items.vital li::before { color: #0A9E6C; }
-.plano-items.plus li::before  { color: #1388E5; }
+.plano-items.plus li::before  { color: #ff7f32; }
 
 .plano-items li:empty::before {
   content: none;
@@ -231,13 +230,14 @@ function assinarPlano(plano) {
   font-weight: 600;
   font-size: 14px;
   cursor: pointer;
+  margin-top: auto;
 }
 
 .btn.vital { background-color: #0A9E6C; }
-.btn.plus  { background-color: #1388E5; }
+.btn.plus  { background-color: #ff7f32; }
 
 .btn.vital:hover { background-color: #0c8a60; }
-.btn.plus:hover  { background-color: #0a7dc9; }
+.btn.plus:hover  { background-color: #fa6f19; }
 
 .photo-1 {
   grid-column: 2;
@@ -281,7 +281,7 @@ function assinarPlano(plano) {
 
 
 /* MOBILE */
-@media (max-width: 780px) {
+@media (max-width: 912px) {
   /* PLANOS */
   .plano-values {
     flex-direction: row;
@@ -331,7 +331,28 @@ function assinarPlano(plano) {
     min-height: 150px;
     aspect-ratio: 1 / 1; /* mantém quadrado */
   }
+  
+  .planos-cards {
+    display: flex;
+    justify-content: center;
+    gap: 32px;
+    flex-wrap: nowrap;
+  }
+
+.plano-card {
+  padding: 18px 16px; 
+  width: 320px;       
 }
 
+}
+
+@media (max-width: 480px) {
+  .planos-cards {
+    display: flex;
+    justify-content: center;
+    gap: 32px;
+    flex-wrap: wrap;
+  }
+}
 
 </style>

@@ -28,9 +28,8 @@ import { ref } from 'vue'
 import img1 from '../assets/imagem1.jpg'
 import img2 from '../assets/imagem2.jpg'
 import img3 from '../assets/imagem3.jpg'
-import img4 from '../assets/imagem4.jpg'
 
-const slides = [img1, img2, img3, img4]
+const slides = [img1, img2, img3]
 const currentIndex = ref(0)
 
 const nextSlide = () => currentIndex.value = (currentIndex.value + 1) % slides.length
@@ -130,7 +129,7 @@ const prevSlide = () => currentIndex.value = (currentIndex.value - 1 + slides.le
 /* ===================== */
 /* 📱 MOBILE AJUSTADO */
 /* ===================== */
-@media (max-width: 768px) {
+@media (max-width: 912px) {
 
   .carousel-slide {
     height: 450px;
@@ -143,7 +142,7 @@ const prevSlide = () => currentIndex.value = (currentIndex.value - 1 + slides.le
     object-fit: contain;
 
     /* 🔑 CONTROLE DE ESTICADA */
-    transform: scale(1.25, 2.90); /* X, Y */
+    transform: scale(1.20, 2.80); /* X, Y */
 
     transform-origin: center center;
   }
@@ -155,6 +154,18 @@ const prevSlide = () => currentIndex.value = (currentIndex.value - 1 + slides.le
 
   .arrow span {
     font-size: 22px;
+  }
+}
+
+@media (max-width: 820px) {
+  .carousel-slide img {
+        transform: scale(1.20, 1.40); /* X, Y */
+  }
+}
+
+@media (max-width: 768px) {
+  .carousel-slide img {
+        transform: scale(1.20, 1.50); /* X, Y */
   }
 }
 
@@ -179,4 +190,21 @@ const prevSlide = () => currentIndex.value = (currentIndex.value - 1 + slides.le
   }
 }
 
+@media (max-width: 390px) {
+  .carousel-slide img {
+        transform: scale(1.20, 3.00); /* X, Y */
+  }
+}
+
+@media (max-width: 375px) {
+  .carousel-slide img {
+        transform: scale(1.20, 3.10); /* X, Y */
+  }
+}
+
+@media (orientation: landscape) and (max-height: 500px) {
+  .carousel-slide img {
+    transform: scale(1.20, 1.31); /* X, Y */    
+  }
+}
 </style>

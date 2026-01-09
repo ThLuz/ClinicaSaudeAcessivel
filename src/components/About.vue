@@ -10,9 +10,9 @@
 
         <p>
           Na Clínica Saúde Acessível, acreditamos que saúde de qualidade deve ser
-          acessível e completa. Por isso, reunimos em um só espaço atendimentos
-          médicos, odontológicos e exames laboratoriais, oferecendo praticidade
-          e cuidado integral para nossos pacientes.
+          acessível e completa. Por isso, reunimos em um só espaço atendimentos de
+          saúde mental, física, odontológica, estética e exames laboratoriais, 
+          oferecendo praticidade e cuidado integral para nossos pacientes.
         </p>
 
         <p>
@@ -144,7 +144,7 @@ import about9 from '../assets/about9.jpeg'
 }
 
 /* MOBILE */
-@media (max-width: 900px) {
+@media (max-width: 912px) {
   .about-container {
     grid-template-columns: 1fr;
   }
@@ -175,6 +175,10 @@ import about9 from '../assets/about9.jpeg'
     width: 100%;
     height: auto; /* deixa a altura proporcional à largura */
     min-height: 150px; /* garante tamanho mínimo */
+  }
+
+  .about-section{
+    padding: 18px;
   }
 }
 

@@ -5,7 +5,6 @@
     <WhyChoose />
     <BenefitsSection />
     <Plans />
-    <Partners />
     <About />        
     <Contact />
     <Footer />
@@ -20,7 +19,6 @@ import Contact from './components/Contact.vue'
 import Plans from './components/Plans.vue'
 import WhatsappButton from './components/WhatsappButton.vue'
 import BenefitsSection from './components/BenefitsSection.vue'
-import Partners from './components/Partners.vue'
 import About from './components/About.vue'
 import WhyChoose from './components/WhyChoose.vue'
 import Footer from './components/Footer.vue'
@@ -79,13 +77,17 @@ iframe {
 }
 
 /* ================= MOBILE ================= */
-@media (max-width: 768px) {
+@media (max-width: 912px) {
   .app {
     max-width: none;      /* 🔥 libera full width */
     width: 100%;
     padding: 0;
     margin: 0;
     overflow-x: hidden;
+  }
+
+  body{
+    background-color: #FFF;
   }
 }
 </style>

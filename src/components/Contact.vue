@@ -142,7 +142,7 @@
   border-radius: 15px;
   box-shadow: 0 5px 15px rgba(0,0,0,0.2);
   width: 100%;
-  max-width: 400px;
+  max-width: 430px;
   text-align: center;
   transition: transform 0.3s ease, background-color 0.3s ease;
 }
@@ -219,7 +219,7 @@
 }
 
 .contact-map {
-  height: 430px;
+  max-width: 430px;
   border-radius: 20px;
   overflow: hidden;
   box-shadow: 0 10px 30px rgba(0,0,0,0.3);
@@ -228,9 +228,17 @@
   box-sizing: border-box;
 }
 
+.contact-map iframe {
+  flex: 1;                /* 👈 ocupa tudo */
+  width: 100%;
+  height: 100%;
+  display: block;         /* 👈 MUITO importante */
+}
+
 /* Mobile */
-@media (max-width: 780px) {
+@media (max-width: 912px) {
   .contact-content {
+    gap: 30px;
     flex-direction: column;
     align-items: center;
   }
@@ -242,16 +250,20 @@
 
   .contact-map {
     height: 300px;
-    padding: 20px;
+    padding: 15px;
+    border-radius: 10px;
   }
  
   .contact-section h2 {
     font-size: 25px;
   }
 
-  .badge-title{
-    font-size: 20px;
-    padding: 12px;
+  .info-item p {
+    font-size: 12px;
+  }  
+
+  .badge-title {
+    font-size: 18px;
   }
 }
 </style>

@@ -44,16 +44,27 @@ export default {
     },
     onScroll() {
       const sections = ['home', 'services', 'plans', 'about', 'contact'];
-      const scrollPos = window.scrollY + 80; // 80px = altura navbar + margem de segurança
+      const scrollY = window.scrollY;
+      const viewportHeight = window.innerHeight;
+      const documentHeight = document.documentElement.scrollHeight;
+
+      // Se chegou no fim da página, é CONTATO
+      if (scrollY + viewportHeight >= documentHeight - 5) {
+        this.activeLink = 'contact';
+        return;
+      }
+
+      const offset = 80;
 
       for (let i = sections.length - 1; i >= 0; i--) {
         const section = document.getElementById(sections[i]);
-        if (section && scrollPos >= section.offsetTop) {
+        if (section && scrollY + offset >= section.offsetTop) {
           this.activeLink = sections[i];
           break;
         }
       }
     }
+
 
   },
   mounted() {
@@ -159,7 +170,7 @@ export default {
 }
 
 /* RESPONSIVO */
-@media (max-width: 768px) {
+@media (max-width: 900px) {
   .menu-toggle {
     display: block;
   }
@@ -206,4 +217,11 @@ export default {
     transform: translateY(0);
   }
 }
+
+.navbar,
+.navbar * {
+  pointer-events: auto !important;
+}
+
+
 </style>

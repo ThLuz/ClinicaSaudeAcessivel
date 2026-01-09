@@ -25,16 +25,23 @@
 </template>
 
 <script setup>
-import services1 from '../assets/services2.jpg'
 import services2 from '../assets/services1.jpg'
+import services1 from '../assets/services2.jpg'
 import services3 from '../assets/services3.jpg'
 import services4 from '../assets/services4.jpg'
 import services5 from '../assets/services5.jpg'
 import services6 from '../assets/services6.jpg'
 import services7 from '../assets/services7.jpg'
+import services8 from '../assets/services8.jpg'
+import services9 from '../assets/services9.jpg'
+import services10 from '../assets/services10.jpg'
+
 
 const services = [
   { image: services1, title: 'DENTISTAS', desc: 'Atendimento odontológico completo para o seu sorriso.' },
+  { image: services8, title: 'PSICOLOGIA', desc: 'Cuidado com a saúde mental e bem-estar emocional.' },
+  { image: services9, title: 'NUTRIÇÃO', desc: 'Acompanhamento nutricional para uma vida mais saudável.' },
+  { image: services10, title: 'FISIOTERAPIA', desc: 'Reabilitação e prevenção para sua qualidade de vida.' },
   { image: services2, title: 'DEPILAÇÃO A LASER', desc: 'Tecnologia avançada para remoção de pelos com conforto e eficácia.' },
   { image: services7, title: 'REMOÇÃO TATUAGEM', desc: 'Procedimentos seguros e modernos para remoção de tatuagens.' },
   { image: services3, title: 'EXAMES', desc: 'Diversos exames para diagnóstico rápido e preciso.' },
@@ -186,7 +193,7 @@ function prevSlide() {
   display: none;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 912px) {
   .services-carousel {
     padding: 25px 10px;
   }
