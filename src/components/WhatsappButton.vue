@@ -20,7 +20,7 @@
 </template>
 
 <script setup>
-const phone = '5511990274243';
+const phone = '5511920744424';
 
 const message =
   'Olá, vim pelo site da Clínica Saúde Acessível e gostaria de mais informações.';

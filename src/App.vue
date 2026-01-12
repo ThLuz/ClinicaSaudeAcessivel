@@ -24,7 +24,7 @@ import WhyChoose from './components/WhyChoose.vue'
 import Footer from './components/Footer.vue'
 
 // Importa a logo do assets para usar como favicon
-import logo from './assets/logotitle.png'
+import logo from './assets/favicon.png'
 
 // Define favicon dinamicamente
 const link = document.createElement('link')

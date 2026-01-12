@@ -66,7 +66,7 @@
 </template>
 
 <script setup>
-const whatsappNumber = '5511992880520';
+const whatsappNumber = '5511920744424';
 
 function assinarPlano(plano) {
   const message = `Olá, gostaria de mais informações sobre o plano ${plano}.`;

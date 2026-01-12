@@ -12,7 +12,7 @@
           garantindo que cada experiência seja única.
         </p>
 
-        <button class="btn-schedule">AGENDE SUA AVALIAÇÃO</button>
+        <button class="btn-schedule" @click="abrirWhatsApp">AGENDE SUA AVALIAÇÃO</button>
       </div>
 
       <!-- COLUNA IMAGEM -->
@@ -51,7 +51,13 @@
 </template>
 
 <script setup>
-/* section clínica */
+const whatsappNumber = '5511920744424';
+
+function abrirWhatsApp() {
+  const message = "Oi! Estou curioso para saber mais sobre a clínica 😃"; // mensagem pronta
+  const url = `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(message)}`;
+  window.open(url, "_blank"); // abre em nova aba
+}
 </script>
 
 <style scoped>

@@ -25,9 +25,9 @@
 
 <script setup>
 import { ref } from 'vue'
-import img1 from '../assets/imagem1.jpg'
-import img2 from '../assets/imagem2.jpg'
-import img3 from '../assets/imagem3.jpg'
+import img1 from '../assets/imagem1.jpeg'
+import img2 from '../assets/imagem2.jpeg'
+import img3 from '../assets/imagem3.jpeg'
 
 const slides = [img1, img2, img3]
 const currentIndex = ref(0)
