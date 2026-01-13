@@ -25,9 +25,9 @@
 
 <script setup>
 import { ref } from 'vue'
-import img1 from '../assets/imagem1.jpeg'
-import img2 from '../assets/imagem2.jpeg'
-import img3 from '../assets/imagem3.jpeg'
+import img1 from '../assets/imagem1.jpg'
+import img2 from '../assets/imagem2.jpg'
+import img3 from '../assets/imagem3.jpg'
 
 const slides = [img1, img2, img3]
 const currentIndex = ref(0)
@@ -49,7 +49,6 @@ const prevSlide = () => currentIndex.value = (currentIndex.value - 1 + slides.le
               -8px 0 20px rgba(0, 0, 0, 0.2);
 }
 
-/* ===== CAROUSEL ===== */
 .carousel {
   width: 100%;
   overflow: hidden;
@@ -62,13 +61,11 @@ const prevSlide = () => currentIndex.value = (currentIndex.value - 1 + slides.le
   transition: transform 0.5s ease-in-out;
 }
 
-/* Cada slide ocupa 100% */
 .carousel-slide {
   min-width: 100%;
   position: relative;
 }
 
-/* Imagem padrão (desktop) */
 .carousel-slide img {
   width: 100%;
   height: 600px;
@@ -78,7 +75,6 @@ const prevSlide = () => currentIndex.value = (currentIndex.value - 1 + slides.le
   transition: transform 0.3s ease, filter 0.3s ease;
 }
 
-/* ===== SETAS ===== */
 .arrow {
   position: absolute;
   top: 50%;
@@ -103,7 +99,6 @@ const prevSlide = () => currentIndex.value = (currentIndex.value - 1 + slides.le
 .arrow.left { left: 12px; }
 .arrow.right { right: 12px; }
 
-/* ===== DOTS ===== */
 .dots {
   position: absolute;
   bottom: 16px;
@@ -126,9 +121,6 @@ const prevSlide = () => currentIndex.value = (currentIndex.value - 1 + slides.le
   transform: scale(1.4);
 }
 
-/* ===================== */
-/* 📱 MOBILE AJUSTADO */
-/* ===================== */
 @media (max-width: 912px) {
 
   .carousel-slide {
@@ -140,10 +132,7 @@ const prevSlide = () => currentIndex.value = (currentIndex.value - 1 + slides.le
     width: 100%;
     height: 100%;
     object-fit: contain;
-
-    /* 🔑 CONTROLE DE ESTICADA */
-    transform: scale(1.20, 2.80); /* X, Y */
-
+    transform: scale(1.20, 2.80);
     transform-origin: center center;
   }
 
@@ -159,20 +148,20 @@ const prevSlide = () => currentIndex.value = (currentIndex.value - 1 + slides.le
 
 @media (max-width: 820px) {
   .carousel-slide img {
-        transform: scale(1.20, 1.40); /* X, Y */
+        transform: scale(1.20, 1.40);
   }
 }
 
 @media (max-width: 768px) {
   .carousel-slide img {
-        transform: scale(1.20, 1.50); /* X, Y */
+        transform: scale(1.20, 1.50);
   }
 }
 
 @media (max-width: 480px) {
 
   .carousel-slide img {
-    aspect-ratio: 4 / 3; /* fica melhor em celular */
+    aspect-ratio: 4 / 3; 
   }
 
   .arrow {
@@ -192,19 +181,19 @@ const prevSlide = () => currentIndex.value = (currentIndex.value - 1 + slides.le
 
 @media (max-width: 390px) {
   .carousel-slide img {
-        transform: scale(1.20, 3.00); /* X, Y */
+        transform: scale(1.20, 3.00); 
   }
 }
 
 @media (max-width: 375px) {
   .carousel-slide img {
-        transform: scale(1.20, 3.10); /* X, Y */
+        transform: scale(1.20, 3.10); 
   }
 }
 
 @media (orientation: landscape) and (max-height: 500px) {
   .carousel-slide img {
-    transform: scale(1.20, 1.31); /* X, Y */    
+    transform: scale(1.20, 1.31);   
   }
 }
 </style>

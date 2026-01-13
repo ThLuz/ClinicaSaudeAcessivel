@@ -2,12 +2,10 @@
   <div class="page">
     <header class="navbar">
       <div class="navbar-content">
-        <!-- LOGO -->
         <div class="brand">
           <img src="../assets/logo.png" alt="Logo" class="logo-image" />
         </div>
 
-        <!-- LINKS DE NAVEGAÇÃO -->
         <nav :class="['nav-links', { open: isMenuOpen }]">
           <a href="#home" :class="{ active: activeLink === 'home' }" @click="setActive('home')">INÍCIO</a>
           <a href="#services" :class="{ active: activeLink === 'services' }" @click="setActive('services')">SERVIÇOS</a>
@@ -16,7 +14,6 @@
           <a href="#contact" :class="{ active: activeLink === 'contact' }" @click="setActive('contact')">CONTATO</a>
         </nav>
 
-        <!-- BOTÃO MENU MOBILE -->
         <button class="menu-toggle" @click="toggleMenu">
           ☰
         </button>
@@ -87,7 +84,6 @@ export default {
   font-family: 'Inter', 'Segoe UI', Roboto, sans-serif;
 }
 
-/* NAVBAR BRANCA */
 .navbar {
   position: fixed;
   top: 0;
@@ -98,7 +94,6 @@ export default {
   z-index: 10;
 }
 
-/* CONTEÚDO CENTRALIZADO */
 .navbar-content {
   max-width: 1200px;
   margin: 0 auto;
@@ -110,7 +105,6 @@ export default {
   padding: 0 24px;
 }
 
-/* LOGO À ESQUERDA */
 .brand {
   position: absolute;
   left: 24px;
@@ -125,7 +119,6 @@ export default {
   filter: drop-shadow(0 1px 2px rgba(0, 0, 0, 0.1));
 }
 
-/* LINKS CENTRALIZADOS */
 .nav-links {
   position: absolute;
   left: 50%;
@@ -145,19 +138,16 @@ export default {
   transition: background-color 0.25s ease, color 0.25s ease;
 }
 
-/* HOVER */
 .nav-links a:hover {
   background-color: #f0f0f0;
   color: #000;
 }
 
-/* LINK ATIVO */
 .nav-links a.active {
-  color: #ff6b00; /* laranja */
+  color: #ff6b00; 
   font-weight: 600;
 }
 
-/* BOTÃO MENU (MOBILE) */
 .menu-toggle {
   position: absolute;
   right: 24px;
@@ -169,7 +159,6 @@ export default {
   display: none;
 }
 
-/* RESPONSIVO */
 @media (max-width: 900px) {
   .menu-toggle {
     display: block;
@@ -206,7 +195,6 @@ export default {
   }
 }
 
-/* Animação suave menu mobile */
 @keyframes fadeIn {
   from {
     opacity: 0;

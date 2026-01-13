@@ -2,7 +2,6 @@
   <section id="about" class="about-section">
     <div class="about-container">
       
-      <!-- TEXTO (FUNDO BRANCO COM LOGO) -->
       <div class="about-text">
         <h2>
           Clínica <span>Saúde Acessível</span>
@@ -28,7 +27,6 @@
         </p>
       </div>
 
-      <!-- FOTOS -->
       <div class="about-photos">
         <div class="photo" :style="{ backgroundImage: `url(${about1})` }"></div>
         <div class="photo" :style="{ backgroundImage: `url(${about2})` }"></div>
@@ -66,7 +64,6 @@ import about9 from '../assets/about9.jpeg'
   font-family: 'Montserrat', sans-serif;
 }
 
-/* CONTAINER */
 .about-container {
   max-width: 1200px;
   margin: 0 auto;
@@ -77,13 +74,11 @@ import about9 from '../assets/about9.jpeg'
   box-shadow: 0 15px 40px rgba(0,0,0,0.15);
 }
 
-/* TEXTO COM LOGO DE FUNDO */
 .about-text {
   background-color: #ffffff;
   padding: 60px 50px;
   color: #6b5e57;
 
-  /* LOGO DE FUNDO */
   background-image: url('../assets/logo.png');
   background-repeat: no-repeat;
   background-position: center;
@@ -91,7 +86,6 @@ import about9 from '../assets/about9.jpeg'
   position: relative;
 }
 
-/* camada para deixar a logo bem fraquinha */
 .about-text::before {
   content: '';
   position: absolute;
@@ -126,7 +120,6 @@ import about9 from '../assets/about9.jpeg'
   font-size: 17px;
 }
 
-/* FOTOS */
 .about-photos {
   background-color: #eef6fb;
   padding: 40px;
@@ -143,7 +136,6 @@ import about9 from '../assets/about9.jpeg'
   box-shadow: 0 10px 25px rgba(0,0,0,0.15);
 }
 
-/* MOBILE */
 @media (max-width: 912px) {
   .about-container {
     grid-template-columns: 1fr;
@@ -156,7 +148,7 @@ import about9 from '../assets/about9.jpeg'
   .about-text {
     text-align: center;
     padding: 40px 20px;
-    background-size: 240px; /* aumenta a logo */
+    background-size: 240px;
   }
 
   .about-photos {
@@ -173,8 +165,8 @@ import about9 from '../assets/about9.jpeg'
     background-position: center;
     box-shadow: 0 10px 25px rgba(0,0,0,0.15);
     width: 100%;
-    height: auto; /* deixa a altura proporcional à largura */
-    min-height: 150px; /* garante tamanho mínimo */
+    height: auto;
+    min-height: 150px;
   }
 
   .about-section{

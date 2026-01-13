@@ -1,7 +1,6 @@
 <template>
   <section class="parceiros-section">
     <div class="parceiros-container">
-      <!-- Logo do MeuClube -->
       <img src="../assets/meuclube.png" alt="Meu Clube Online" class="logo-meuclube" />
 
       <p class="descricao">
@@ -44,7 +43,7 @@
 }
 
 .logo-meuclube {
-  max-width: 250px; /* controla o tamanho do logo */
+  max-width: 250px; 
   margin: 0 auto 15px;
   display: block;
 }

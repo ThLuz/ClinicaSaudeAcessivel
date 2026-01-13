@@ -7,7 +7,6 @@
     </div>
 
     <div class="planos-cards">
-      <!-- Plano Vital -->
       <div class="plano-card vital">
         <img src="../assets/item1.png" alt="Vital" />
         <h4 class="plano-title vital">ORTO VITAL</h4>
@@ -34,7 +33,6 @@
         <button class="btn vital"  @click="assinarPlano('ORTO VITAL')">ASSINAR PLANO</button>
       </div>
 
-      <!-- Plano Vital Premium -->
       <div class="plano-card plus">
         <img src="../assets/item3.png" alt="Vital Plus" />
         <h4 class="plano-title plus">ORTO VITAL PREMIUM</h4>
@@ -78,7 +76,7 @@ function assinarPlano(plano) {
 
 <style scoped>
 .planos-section {
-  padding: 30px 10px; /* ⬅️ menor */
+  padding: 30px 10px;
   background-color: #fce2d6;
   font-family: 'Montserrat', sans-serif;
   text-align: center;
@@ -89,14 +87,13 @@ function assinarPlano(plano) {
   background-color: #ff7f32;
   color: #fff;
   font-weight: 700;
-  font-size: 26px; /* ⬅️ menor */
+  font-size: 26px;
   padding: 10px 22px;
   border-radius: 8px;
   margin-bottom: 35px;
   display: inline-block;
 }
 
-/* CARDS */
 .planos-cards {
   display: flex;
   justify-content: center;
@@ -120,7 +117,6 @@ function assinarPlano(plano) {
   transform: translateY(-5px);
 }
 
-/* SOMBRAS */
 .plano-card.vital {
   box-shadow: 0 8px 20px rgba(10, 158, 108, 0.22);
 }
@@ -129,15 +125,13 @@ function assinarPlano(plano) {
   box-shadow: 0 8px 20px rgba(245, 121, 20, 0.22);
 }
 
-/* IMAGEM */
 .plano-card img {
-  width: 52%; /* ⬅️ menor */
+  width: 52%;
   margin-bottom: 4px;
 }
 
-/* TÍTULO */
 .plano-title {
-  font-size: 26px; /* ⬅️ menor */
+  font-size: 26px; 
   font-weight: 700;
   margin-bottom: 6px;
 }
@@ -145,7 +139,6 @@ function assinarPlano(plano) {
 .plano-title.vital { color: #0A9E6C; }
 .plano-title.plus  { color: #ff7f32; }
 
-/* VALORES */
 .plano-values {
   display: flex;
   gap: 12px;
@@ -157,10 +150,9 @@ function assinarPlano(plano) {
   border-radius: 12px;
   padding: 10px 14px;
   min-width: 140px;
-
-  display: flex;              /* 🔥 força layout correto */
-  flex-direction: column;     /* 🔥 quebra linha sempre */
-  align-items: center;        /* centraliza */
+  display: flex;              
+  flex-direction: column;     
+  align-items: center;       
   text-align: center;
   color: #777;
 }
@@ -170,7 +162,7 @@ function assinarPlano(plano) {
   font-size: 12px;
   color: #777;
   margin-bottom: 4px;
-  display: block;             /* reforço */
+  display: block;            
 }
 
 
@@ -185,7 +177,6 @@ function assinarPlano(plano) {
 .value-box.destaque.vital { border-color: #0A9E6C; }
 .value-box.destaque.plus  { border-color: #ff7f32; }
 
-/* LISTA */
 .plano-items {
   list-style: none;
   padding: 0;
@@ -196,7 +187,7 @@ function assinarPlano(plano) {
 }
 
 .plano-items li {
-  font-size: 13px; /* ⬅️ menor */
+  font-size: 13px; 
   margin-bottom: 8px;
   padding-left: 20px;
   position: relative;
@@ -220,10 +211,9 @@ function assinarPlano(plano) {
   min-height: 20px;
 }
 
-/* BOTÃO */
 .btn {
   width: 100%;
-  padding: 10px; /* ⬅️ menor */
+  padding: 10px;
   border-radius: 12px;
   border: none;
   color: #fff;
@@ -279,10 +269,7 @@ function assinarPlano(plano) {
   background-image: url('@/assets/about6.jpg');
 }
 
-
-/* MOBILE */
 @media (max-width: 912px) {
-  /* PLANOS */
   .plano-values {
     flex-direction: row;
     justify-content: center;
@@ -318,10 +305,9 @@ function assinarPlano(plano) {
     padding: 8px;
   }
 
-  /* ABOUT PHOTOS: sempre 2 colunas, sem esconder fotos */
   .about-photos {
     display: grid !important;
-    grid-template-columns: repeat(2, 1fr); /* duas colunas fixas */
+    grid-template-columns: repeat(2, 1fr);
     gap: 16px;
     padding: 20px;
   }
@@ -329,7 +315,7 @@ function assinarPlano(plano) {
   .about-photos .photo {
     width: 100%;
     min-height: 150px;
-    aspect-ratio: 1 / 1; /* mantém quadrado */
+    aspect-ratio: 1 / 1;
   }
   
   .planos-cards {
@@ -339,11 +325,10 @@ function assinarPlano(plano) {
     flex-wrap: nowrap;
   }
 
-.plano-card {
-  padding: 18px 16px; 
-  width: 320px;       
-}
-
+  .plano-card {
+    padding: 18px 16px; 
+    width: 320px;       
+  }
 }
 
 @media (max-width: 480px) {

@@ -18,7 +18,7 @@ const year = new Date().getFullYear()
 
 <style scoped>
 .footer {
-  background-color: #2a2a2a; /* combina com o contato */
+  background-color: #2a2a2a;
   border-top: 1px solid #444;
   padding: 15px 10px;
   font-family: 'Montserrat', sans-serif;
@@ -43,7 +43,6 @@ const year = new Date().getFullYear()
   font-size: 14px;
 }
 
-/* Mobile */
 @media (max-width: 480px) {
   .footer-divider {
     display: none;

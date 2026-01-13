@@ -3,7 +3,6 @@
     <div class="badge-title">SAIBA COMO CHEGAR ATÉ NÓS</div>    
     <div class="contact-content">
       
-      <!-- Mapa -->
       <div class="contact-map">
         <iframe 
           src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3657.053924781612!2d-46.70122068448566!3d-23.55076918469125!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94ce5769a8c1b421%3A0x43a2f8d7f3a6d2a!2sAv.%20Alexios%20Jafet%2C%201196%20-%20Jardim%20Ipanema%2C%20S%C3%A3o%20Paulo%20-%20SP%2C%2005187-010!5e0!3m2!1spt-BR!2sbr!4v1694892160000!5m2!1spt-BR!2sbr"
@@ -16,9 +15,7 @@
         </iframe>
       </div>
 
-      <!-- Coluna de informações -->
       <div class="contact-info">
-        <!-- Endereço -->
         <div class="info-item">
           <div class="icon-title">
             <i class="fas fa-map-marker-alt"></i>
@@ -27,7 +24,6 @@
           <p>Av. Alexios Jafet, 1196 - Jardim Ipanema (Zona Oeste), São Paulo - SP, 05187-010</p>
         </div>
 
-        <!-- Horário de funcionamento -->
         <div class="info-item">
           <div class="icon-title">
             <i class="fas fa-clock"></i>
@@ -38,7 +34,6 @@
           </p>
         </div>
 
-        <!-- Telefone + Botões -->
         <div class="info-item">
           <div class="icon-title">
             <i class="fas fa-phone-alt"></i>
@@ -47,7 +42,6 @@
           <p>(11) 92074-4424</p>
         </div>
         <div class="info-item">
-                  <!-- Botões abaixo do telefone -->
           <div class="button-group">
             <a 
               href="https://waze.com/ul?q=Av.%20Alexios%20Jafet%2C%201196%20-%20Jardim%20Ipanema%2C%20São%20Paulo%20-%20SP%2C%2005187-010&navigate=yes" 
@@ -68,9 +62,7 @@
   </section>
 </template>
 
-<script setup>
-// Sem lógica dinâmica
-</script>
+<script setup></script>
 
 <style scoped>
 @import url("https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css");
@@ -170,7 +162,6 @@
   line-height: 1.4;
 }
 
-/* Botões */
 .button-group {
   display: flex;
   gap: 10px;
@@ -229,13 +220,12 @@
 }
 
 .contact-map iframe {
-  flex: 1;                /* 👈 ocupa tudo */
+  flex: 1;               
   width: 100%;
   height: 100%;
-  display: block;         /* 👈 MUITO importante */
+  display: block;       
 }
 
-/* Mobile */
 @media (max-width: 912px) {
   .contact-content {
     gap: 30px;

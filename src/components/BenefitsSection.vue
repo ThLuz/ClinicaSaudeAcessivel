@@ -16,7 +16,6 @@
       </div>
     </div>
 
-    <!-- controles desktop apenas -->
     <div class="services-controls">
       <button class="prev" @click="prevSlide">←</button>
       <button class="next" @click="nextSlide">→</button>
@@ -68,18 +67,15 @@ function prevSlide() {
 </script>
 
 <style scoped>
-/* ========================= */
-/* COMPORTAMENTO GERAL       */
-/* ========================= */
 .services-carousel {
   padding: 40px 20px;
   background: #eee;
   font-family: 'Montserrat', sans-serif;
   text-align: center;
-  overflow: hidden; /* evita que a tela estique */
+  overflow: hidden; 
   box-sizing: border-box;
   width: 100%;
-  max-width: 100vw; /* limita viewport */
+  max-width: 100vw; 
 }
 
 .badge-title {
@@ -113,7 +109,7 @@ function prevSlide() {
 .services-list {
   display: flex;
   gap: 20px;
-  overflow-x: hidden; /* desktop: scroll via JS */
+  overflow-x: hidden;
   scroll-behavior: smooth;
   -webkit-overflow-scrolling: touch;
   width: 100%;
@@ -188,7 +184,6 @@ function prevSlide() {
   margin-top: -2px;
 }
 
-/* Remove scrollbar */
 .services-list::-webkit-scrollbar {
   display: none;
 }
@@ -217,13 +212,13 @@ function prevSlide() {
   }
 
   .services-list {
-    overflow-x: auto; /* swipe touch */
+    overflow-x: auto;
     gap: 15px;
     padding-bottom: 10px;
   }
 
   .service-card {
-    flex: 0 0 75%; /* quase toda tela */
+    flex: 0 0 75%;
     max-width: 75%;
   }
 
@@ -240,7 +235,6 @@ function prevSlide() {
     line-height: 1.3;
   }
 
-  /* Remove os botões no mobile */
   .services-controls {
     display: none;
   }

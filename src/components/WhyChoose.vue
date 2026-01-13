@@ -2,7 +2,6 @@
   <section class="clinic-section">
     <div class="container">
 
-      <!-- COLUNA TEXTO -->
       <div class="text-column">
         <h2>CONHEÇA NOSSA CLÍNICA EM SÃO PAULO</h2>
         <p>
@@ -15,13 +14,11 @@
         <button class="btn-schedule" @click="abrirWhatsApp">AGENDE SUA AVALIAÇÃO</button>
       </div>
 
-      <!-- COLUNA IMAGEM -->
       <div class="image-column">
 
         <div class="image-wrapper">
           <img src="../assets/about3.jpeg" alt="Clínica" />
 
-          <!-- CARDS SOBRE A IMAGEM -->
           <div class="info-cards">
 
             <div class="card card-patients">
@@ -54,16 +51,13 @@
 const whatsappNumber = '5511920744424';
 
 function abrirWhatsApp() {
-  const message = "Oi! Estou curioso para saber mais sobre a clínica 😃"; // mensagem pronta
+  const message = "Oi! Estou curioso para saber mais sobre a clínica 😃";
   const url = `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(message)}`;
-  window.open(url, "_blank"); // abre em nova aba
+  window.open(url, "_blank"); 
 }
 </script>
 
 <style scoped>
-/* ===================== */
-/* SEÇÃO */
-/* ===================== */
 .clinic-section {
   background-color: #ffffff;
   padding: 80px 20px;
@@ -71,9 +65,6 @@ function abrirWhatsApp() {
   overflow-x: hidden;
 }
 
-/* ===================== */
-/* CONTAINER */
-/* ===================== */
 .container {
   max-width: 1200px;
   margin: 0 auto;
@@ -83,9 +74,6 @@ function abrirWhatsApp() {
   flex-wrap: wrap;
 }
 
-/* ===================== */
-/* COLUNAS */
-/* ===================== */
 .text-column {
   flex: 1 1 500px;
 }
@@ -94,9 +82,6 @@ function abrirWhatsApp() {
   flex: 1 1 400px;
 }
 
-/* ===================== */
-/* IMAGEM */
-/* ===================== */
 .image-wrapper {
   position: relative;
 }
@@ -108,9 +93,6 @@ function abrirWhatsApp() {
   display: block;
 }
 
-/* ===================== */
-/* TEXTO */
-/* ===================== */
 h2 {
   font-size: 34px;
   font-weight: 800;
@@ -127,9 +109,6 @@ p {
   margin-bottom: 30px;
 }
 
-/* ===================== */
-/* BOTÃO */
-/* ===================== */
 .btn-schedule {
   padding: 12px 25px;
   background-color: #f8944c;
@@ -145,35 +124,26 @@ p {
   background-color: #f18a28;
 }
 
-/* ===================== */
-/* CARDS SOBRE A IMAGEM */
-/* ===================== */
 .info-cards {
   position: absolute;
   bottom: 8px;
   right: 8px;
-
   display: flex;
   gap: 16px;
   pointer-events: none;
 }
 
-/* ===================== */
-/* CARD BASE */
-/* ===================== */
 .card {
   width: 90px;
   height: 80px;
   padding: 10px;
   border-radius: 12px;
   color: #ffffff;
-
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   gap: 2px;
-
   text-align: center;
 }
 
@@ -193,9 +163,6 @@ p {
   font-weight: 700;
 }
 
-/* ===================== */
-/* CORES */
-/* ===================== */
 .card-patients {
   background-color: #f8944c;
 }
@@ -208,9 +175,6 @@ p {
   background-color: #3cb371;
 }
 
-/* ===================== */
-/* MOBILE */
-/* ===================== */
 @media (max-width: 900px) {
 
   .clinic-section {
@@ -226,12 +190,12 @@ p {
 
   .plano-card {
     width: 92%;
-    padding: 12px 12px 8px; /* ⬅️ menos branco embaixo */
+    padding: 12px 12px 8px; 
   }
 
   .plano-card img {
-    width: 65%;            /* ⬅️ imagem maior */
-    margin-bottom: 6px;    /* ⬅️ menos espaço */
+    width: 65%;            
+    margin-bottom: 6px;  
   }
 
   .plano-title {
@@ -250,7 +214,7 @@ p {
   }
 
   .plano-items {
-    margin-bottom: 8px;    /* ⬅️ remove espaço excessivo */
+    margin-bottom: 8px;    
   }
 
   .plano-items li {
