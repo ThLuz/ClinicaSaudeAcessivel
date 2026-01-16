@@ -79,7 +79,7 @@ Prévia do layout da landing page:
 
 ```bash
 # Clone o repositório
-git clone https://github.com/seu-usuario/clinica-saude-acessivel.git
+git clone https://github.com/ThLuz/ClinicaSaudeAcessivel.git
 
 # Acesse a pasta do projeto
 cd clinica-saude-acessivel
