@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="https://i.imgur.com/53BQWR1.png" alt="Logo" />
+  <img src="https://i.imgur.com/53BQWR1.png" width="200" alt="Logo" />
 </p>
 
 <h1 align="center">Clínica Saúde Acessível</h1>
@@ -70,7 +70,7 @@ Por isso, reunimos em um só espaço atendimentos de **saúde mental, física, o
 Prévia do layout da landing page:
 
 <p align="center">
-  <img src="https://clinicasaudeacessivel.com.br/assets/preview.png" alt="Clínica Saúde Acessível Layout Preview"/>
+  <img src="https://i.imgur.com/RNp08WR.png" alt="Clínica Saúde Acessível Layout Preview"/>
 </p>
 
 ---
