@@ -54,17 +54,6 @@ That’s why we bring together **mental health, physical health, dental care, ae
 
 ---
 
-## 🧩 Features
-
-- ✅ Responsive institutional landing page  
-- ✅ Services section (healthcare, aesthetics, and exams)  
-- ✅ Plans presentation  
-- ✅ Location information  
-- ✅ Contact button with **direct WhatsApp redirection**  
-- ✅ Modern layout focused on conversion  
-
----
-
 ## 🎨 Layout
 
 Landing page layout preview:
