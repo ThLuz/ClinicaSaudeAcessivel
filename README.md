@@ -13,29 +13,29 @@
 
 ---
 
-## ℹ️ Sobre o Projeto
+## ℹ️ About the Project
 
-A **Clínica Saúde Acessível** é uma **landing page institucional** desenvolvida para apresentar, de forma clara e objetiva, os serviços, planos e localização da clínica, além de facilitar o contato direto com os pacientes via **WhatsApp**.
+**Clínica Saúde Acessível** is an **institutional landing page** developed to clearly and objectively present the clinic’s services, plans, and location, as well as to facilitate direct contact with patients via **WhatsApp**.
 
-Na Clínica Saúde Acessível, acreditamos que **saúde de qualidade deve ser acessível e completa**.  
-Por isso, reunimos em um só espaço atendimentos de **saúde mental, física, odontológica, estética e exames laboratoriais**, oferecendo praticidade e cuidado integral para nossos pacientes.
+At Clínica Saúde Acessível, we believe that **quality healthcare should be accessible and comprehensive**.  
+That’s why we bring together **mental health, physical health, dental care, aesthetic treatments, and laboratory exams** in one place, offering convenience and complete care for our patients.
 
-🔗 **Acesse o site:**  
+🔗 **Visit the website:**  
 👉 https://clinicasaudeacessivel.com.br/
 
 ---
 
-## 🎯 Objetivos da Landing Page
+## 🎯 Landing Page Goals
 
-- Apresentar os **serviços oferecidos pela clínica**
-- Divulgar **planos acessíveis**
-- Informar **localização e formas de contato**
-- Facilitar o **redirecionamento para WhatsApp**
-- Oferecer uma experiência simples, rápida e responsiva
+- Present the **services offered by the clinic**
+- Promote **affordable healthcare plans**
+- Provide **location and contact information**
+- Facilitate **direct redirection to WhatsApp**
+- Deliver a **simple, fast, and responsive user experience**
 
 ---
 
-## 💻 Tecnologias Utilizadas
+## 💻 Technologies Used
 
 <p align="center">
   <a href="https://vuejs.org/" target="_blank">
@@ -44,30 +44,30 @@ Por isso, reunimos em um só espaço atendimentos de **saúde mental, física, o
   <a href="https://vitejs.dev/" target="_blank">
     <img src="https://img.shields.io/badge/Vite-646CFF?style=for-the-badge&logo=vite&logoColor=FFD62E" alt="Vite Badge"/>
   </a>
-  <a href="https://developer.mozilla.org/pt-BR/docs/Web/HTML" target="_blank">
+  <a href="https://developer.mozilla.org/docs/Web/HTML" target="_blank">
     <img src="https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white" alt="HTML5 Badge"/>
   </a>
-  <a href="https://developer.mozilla.org/pt-BR/docs/Web/CSS" target="_blank">
+  <a href="https://developer.mozilla.org/docs/Web/CSS" target="_blank">
     <img src="https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white" alt="CSS3 Badge"/>
   </a>
 </p>
 
 ---
 
-## 🧩 Funcionalidades
+## 🧩 Features
 
-- ✅ Página institucional responsiva  
-- ✅ Seção de serviços (saúde, estética e exames)  
-- ✅ Apresentação de planos  
-- ✅ Informações de localização  
-- ✅ Botão de contato com **redirecionamento direto para WhatsApp**  
-- ✅ Layout moderno e focado em conversão  
+- ✅ Responsive institutional landing page  
+- ✅ Services section (healthcare, aesthetics, and exams)  
+- ✅ Plans presentation  
+- ✅ Location information  
+- ✅ Contact button with **direct WhatsApp redirection**  
+- ✅ Modern layout focused on conversion  
 
 ---
 
 ## 🎨 Layout
 
-Prévia do layout da landing page:
+Landing page layout preview:
 
 <p align="center">
   <img src="https://i.imgur.com/RNp08WR.png" alt="Clínica Saúde Acessível Layout Preview"/>
@@ -75,17 +75,17 @@ Prévia do layout da landing page:
 
 ---
 
-## ▶️ Como Rodar o Projeto Localmente
+## ▶️ Getting Started
 
 ```bash
-# Clone o repositório
+# Clone the repository
 git clone https://github.com/ThLuz/ClinicaSaudeAcessivel.git
 
-# Acesse a pasta do projeto
+# Navigate to the project folder
 cd clinica-saude-acessivel
 
-# Instale as dependências
+# Install dependencies
 npm install
 
-# Inicie o servidor de desenvolvimento
+# Start the development server
 npm run dev
