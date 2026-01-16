@@ -25,11 +25,13 @@
 
 <script setup>
 import { ref } from 'vue'
-import img1 from '../assets/imagem1.jpg'
-import img2 from '../assets/imagem2.jpg'
-import img3 from '../assets/imagem3.jpg'
+import img1 from '../assets/imagem1.jpeg'
+import img2 from '../assets/imagem2.jpeg'
+import img3 from '../assets/imagem3.jpeg'
+import img4 from '../assets/imagem4.jpeg'
+import img5 from '../assets/imagem5.jpeg'
 
-const slides = [img1, img2, img3]
+const slides = [img1, img2, img3, img4, img5]
 const currentIndex = ref(0)
 
 const nextSlide = () => currentIndex.value = (currentIndex.value + 1) % slides.length
@@ -45,8 +47,9 @@ const prevSlide = () => currentIndex.value = (currentIndex.value - 1 + slides.le
 
 .back {
   background-color: #eee;
-  box-shadow: 8px 0 20px rgba(0, 0, 0, 0.2),
-              -8px 0 20px rgba(0, 0, 0, 0.2);
+  box-shadow:
+    8px 0 20px rgba(0, 0, 0, 0.2),
+   -8px 0 20px rgba(0, 0, 0, 0.2);
 }
 
 .carousel {
@@ -63,16 +66,18 @@ const prevSlide = () => currentIndex.value = (currentIndex.value - 1 + slides.le
 
 .carousel-slide {
   min-width: 100%;
+  aspect-ratio: 16 / 9;
   position: relative;
+  overflow: hidden;
+  max-width: 630px;
 }
 
 .carousel-slide img {
   width: 100%;
-  height: 600px;
-  object-fit: cover;
+  height: 100%;
+  object-fit: fill;
   display: block;
   filter: brightness(80%);
-  transition: transform 0.3s ease, filter 0.3s ease;
 }
 
 .arrow {
@@ -96,8 +101,13 @@ const prevSlide = () => currentIndex.value = (currentIndex.value - 1 + slides.le
   color: #333;
 }
 
-.arrow.left { left: 12px; }
-.arrow.right { right: 12px; }
+.arrow.left {
+  left: 12px;
+}
+
+.arrow.right {
+  right: 12px;
+}
 
 .dots {
   position: absolute;
@@ -111,7 +121,7 @@ const prevSlide = () => currentIndex.value = (currentIndex.value - 1 + slides.le
 .dots span {
   width: 14px;
   height: 14px;
-  background: rgba(255,255,255,0.8);
+  background: rgba(255, 255, 255, 0.8);
   border-radius: 50%;
   cursor: pointer;
 }
@@ -121,79 +131,10 @@ const prevSlide = () => currentIndex.value = (currentIndex.value - 1 + slides.le
   transform: scale(1.4);
 }
 
-@media (max-width: 912px) {
-
+@media (max-width: 1300px) {
   .carousel-slide {
-    height: 450px;
-    overflow: hidden;
-  }
-
-  .carousel-slide img {
-    width: 100%;
-    height: 100%;
-    object-fit: contain;
-    transform: scale(1.20, 2.80);
-    transform-origin: center center;
-  }
-
-  .arrow {
-    width: 44px;
-    height: 44px;
-  }
-
-  .arrow span {
-    font-size: 22px;
+    aspect-ratio: 4 / 3;
   }
 }
 
-@media (max-width: 820px) {
-  .carousel-slide img {
-        transform: scale(1.20, 1.40);
-  }
-}
-
-@media (max-width: 768px) {
-  .carousel-slide img {
-        transform: scale(1.20, 1.50);
-  }
-}
-
-@media (max-width: 480px) {
-
-  .carousel-slide img {
-    aspect-ratio: 4 / 3; 
-  }
-
-  .arrow {
-    width: 36px;
-    height: 36px;
-  }
-
-  .arrow span {
-    font-size: 18px;
-  }
-
-  .dots span {
-    width: 10px;
-    height: 10px;
-  }
-}
-
-@media (max-width: 390px) {
-  .carousel-slide img {
-        transform: scale(1.20, 3.00); 
-  }
-}
-
-@media (max-width: 375px) {
-  .carousel-slide img {
-        transform: scale(1.20, 3.10); 
-  }
-}
-
-@media (orientation: landscape) and (max-height: 500px) {
-  .carousel-slide img {
-    transform: scale(1.20, 1.31);   
-  }
-}
 </style>

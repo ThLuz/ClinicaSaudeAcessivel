@@ -69,7 +69,7 @@ iframe {
   display: block;
 }
 
-@media (max-width: 912px) {
+@media (max-width: 1300px) {
   .app {
     max-width: none;    
     width: 100%;

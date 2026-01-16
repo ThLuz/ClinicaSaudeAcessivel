@@ -2,7 +2,7 @@
   <section id="plans" class="planos-section">
     <div class="planos-header">
       <div class="badge-title">
-        PLANOS ODONTOLÓGICOS
+        PLANOS ORTODÔNTICOS ODONTOLÓGICOS
       </div>
     </div>
 
@@ -49,7 +49,7 @@
         </div>
 
         <ul class="plano-items plus">
-          <li>Instalação, remoção e limpeza ao fim do tratamento inclusos (gratuitos)</li>
+          <li>Instalação, remoção e limpeza ao fim do tratamento inclusos</li>
           <li>Documentação inclusa</li>
           <li>01 manutenção mensal</li>
           <li>Todos os procedimentos clínicos com 20% de desconto</li>

@@ -120,7 +120,6 @@ function prevSlide() {
 
 .service-card {
   flex: 0 0 auto;
-  width: 280px;
   max-width: 280px;
   background: #eee;
   border-radius: 12px;
@@ -218,8 +217,8 @@ function prevSlide() {
   }
 
   .service-card {
-    flex: 0 0 75%;
-    max-width: 75%;
+    flex: 0 0 320px;
+    max-width: 320px;
   }
 
   .service-card img {
