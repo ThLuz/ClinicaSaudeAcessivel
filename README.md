@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="https://imgur.com/we8RHwZ" alt="Logo" />
+  <img src="https://imgur.com/a/tHMDyKd#we8RHwZ" alt="Logo" />
 </p>
 
 <h1 align="center">Clínica Saúde Acessível</h1>
