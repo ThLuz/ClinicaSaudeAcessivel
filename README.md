@@ -71,7 +71,7 @@ Prévia do layout da landing page:
 git clone https://github.com/ThLuz/ClinicaSaudeAcessivel.git
 
 # Acessar a pasta do projeto
-cd clinica-saude-acessivel
+cd ClinicaSaudeAcessivel
 
 # Instalar as dependências
 npm install
