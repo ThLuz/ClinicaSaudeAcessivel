@@ -13,29 +13,29 @@
 
 ---
 
-## ℹ️ About the Project
+## ℹ️ Sobre o Projeto
 
-**Clínica Saúde Acessível** is an **institutional landing page** developed to clearly and objectively present the clinic’s services, plans, and location, as well as to facilitate direct contact with patients via **WhatsApp**.
+A **Clínica Saúde Acessível** é uma **landing page institucional** desenvolvida para apresentar de forma clara e objetiva os serviços, planos e localização da clínica, além de facilitar o contato direto com os pacientes via **WhatsApp**.
 
-At Clínica Saúde Acessível, we believe that **quality healthcare should be accessible and comprehensive**.  
-That’s why we bring together **mental health, physical health, dental care, aesthetic treatments, and laboratory exams** in one place, offering convenience and complete care for our patients.
+Na Clínica Saúde Acessível, acreditamos que **saúde de qualidade deve ser acessível e completa**.  
+Por isso, reunimos em um único ambiente digital **saúde mental, saúde física, odontologia, tratamentos estéticos e exames laboratoriais**, oferecendo praticidade e cuidado integral aos nossos pacientes.
 
-🔗 **Visit the website:**  
+🔗 **Visite o site:**  
 👉 https://clinicasaudeacessivel.com.br/
 
 ---
 
-## 🎯 Landing Page Goals
+## 🎯 Objetivos da Landing Page
 
-- Present the **services offered by the clinic**
-- Promote **affordable healthcare plans**
-- Provide **location and contact information**
-- Facilitate **direct redirection to WhatsApp**
-- Deliver a **simple, fast, and responsive user experience**
+- Apresentar os **serviços oferecidos pela clínica**
+- Divulgar **planos de saúde acessíveis**
+- Fornecer **informações de localização e contato**
+- Facilitar o **redirecionamento direto para o WhatsApp**
+- Entregar uma **experiência simples, rápida e responsiva**
 
 ---
 
-## 💻 Technologies Used
+## 💻 Tecnologias Utilizadas
 
 <p align="center">
   <a href="https://vuejs.org/" target="_blank">
@@ -56,25 +56,25 @@ That’s why we bring together **mental health, physical health, dental care, ae
 
 ## 🎨 Layout
 
-Landing page layout preview:
+Prévia do layout da landing page:
 
 <p align="center">
-  <img src="https://i.imgur.com/RNp08WR.png" alt="Clínica Saúde Acessível Layout Preview"/>
+  <img src="https://i.imgur.com/RNp08WR.png" alt="Prévia do Layout da Clínica Saúde Acessível"/>
 </p>
 
 ---
 
-## ▶️ Getting Started
+## ▶️ Como Executar o Projeto
 
 ```bash
-# Clone the repository
+# Clonar o repositório
 git clone https://github.com/ThLuz/ClinicaSaudeAcessivel.git
 
-# Navigate to the project folder
+# Acessar a pasta do projeto
 cd clinica-saude-acessivel
 
-# Install dependencies
+# Instalar as dependências
 npm install
 
-# Start the development server
+# Iniciar o servidor de desenvolvimento
 npm run dev
